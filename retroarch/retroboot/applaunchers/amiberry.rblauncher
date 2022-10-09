@@ -1,0 +1,5 @@
+# Retroboot App Launcher
+
+LAUNCHER_LABEL="Amiberry"
+LAUNCHER_DESCRIPTION="Amiberry Amiga Emulator"
+LAUNCHER_SCRIPT_PATH="/media/retroarch/apps/amiberry/launchamiberry.sh"

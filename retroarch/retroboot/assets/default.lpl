@@ -1,0 +1,165 @@
+{
+  "version": "1.0",
+  "items": [
+    {
+      "path": "/gaadata/1/SCES-00002.cue",
+      "label": "Battle Arena Toshinden (Europe)",
+      "core_path": "/media/retroarch/cores/km_pcsx_peops_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [PEOPS]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/2/SCES-00992.cue",
+      "label": "Cool Boarders 2 (Europe)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/3/SCES-00008.cue",
+      "label": "Destruction Derby (Europe)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/tmp/retroboot/FinalFantasyVII.m3u",
+      "label": "Final Fantasy VII (USA)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/5/SLES-00032.cue",
+      "label": "Grand Theft Auto - Collector's Edition (Europe)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/6/SCUS-94181.cue",
+      "label": "Intelligent Qube (USA)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/7/SCES-00003.cue",
+      "label": "Jumping Flash! (Europe)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/tmp/retroboot/MetalGearSolid.m3u",
+      "label": "Metal Gear Solid (USA)",
+      "core_path": "/media/retroarch/cores/km_pcsx_peops_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [PEOPS]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/9/SLUS-01111.cue",
+      "label": "Mr Driller (USA)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/10/SLES-00664.cue",
+      "label": "Oddworld - Abe's Oddysee (Europe)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/13/SLUS-00339.cue",
+      "label": "Persona Revelations (USA)",
+      "core_path": "/media/retroarch/cores/km_pcsx_peops_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [PEOPS]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/14/SLUS-00797.cue",
+      "label": "R4 - Ridge Racer Type 4 (USA)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/11/SLUS-00005.cue",
+      "label": "Rayman (USA)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/12/SLES-00969.cue",
+      "label": "Resident Evil - Director's Cut (Europe)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/15/SLUS-00418.cue",
+      "label": "Super Puzzle Fighter II Turbo (USA)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/16/SCUS-94240.cue",
+      "label": "Syphon Filter (USA)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/17/SCES-01237.cue",
+      "label": "Tekken 3 (Europe)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/18/SLES-01136.cue",
+      "label": "Tom Clancy's Rainbow Six (Europe)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/19/SCUS-94304.cue",
+      "label": "Twisted Metal (USA)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    },
+    {
+      "path": "/gaadata/20/SCUS-94608.cue",
+      "label": "Wild Arms (USA)",
+      "core_path": "/media/retroarch/cores/km_pcsx_neon_libretro.so",
+      "core_name": "Sony - PSX (km_PCSX ReARMed) [NEON]",
+      "crc32": "00000000|crc",
+      "db_name": "Sony - PlayStation.lpl"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+shaders = 1
+
+shader0 = misc/image-adjustment.slang
+
+parameters = "ia_FLIP_HORZ;ia_FLIP_VERT"
+ia_FLIP_HORZ = 1.0
+ia_FLIP_VERT = 1.0

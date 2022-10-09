@@ -1,0 +1,43 @@
+\\Genmidi.drv
+General MIDI for Roland MPU MIDI interface
+\\Genmidi.hlp
+General MIDI for Roland MPU MIDI interface
+
+This driver follows the IMA spec for General MIDI.
+This will work on such devices as the Roland 
+Sound Canvas and SCC-1 when connected to a Roland
+MPU interface or compatible.  The Roland SCC-1
+card does not require a MIDI interface card.
+There are other patches made by hard working 
+Sierra musicians to allow General MIDI support 
+for D-110/10/20's, Proteus 1 and other devices.  
+Let us know what you have and maybe we'll make 
+a patch.  
+Have Fun!
+
+
+\\Genmidmv.drv
+General MIDI for ProAudio Spectrum MIDI interface
+\\Genmidmv.hlp
+General MIDI for ProAudio Spectrum MIDI interface
+
+This driver follows the IMA spec for General MIDI.
+This will work on such devices as the Roland 
+Sound Canvas when connected to the MediaVision
+ProAudio Spectrum MIDI interface.  There are other
+patches made by hard working Sierra musicians to 
+allow General MIDI support for D-110/10/20's, 
+Proteus 1 and other devices.  Let us know what you 
+have and  maybe we'll make a patch.  
+Have Fun!
+
+
+\\mt32mv.drv
+Roland MT-32 for ProAudio Spectrum MIDI interface
+\\mt32mv.hlp
+Roland MT-32 for ProAudio Spectrum MIDI interface
+
+This driver will work with a Roland MT-32, MT-100,
+CM-32L, or CM-64 synthesizer when connected to 
+the MediaVision ProAudio Spectrum MIDI interface.
+

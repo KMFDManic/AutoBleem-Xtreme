@@ -1,0 +1,5 @@
+# Retroboot App Launcher
+
+LAUNCHER_LABEL="RetroArch"
+LAUNCHER_DESCRIPTION="Switch to RetroArch"
+LAUNCHER_SCRIPT_PATH="/media/retroarch/retroboot/bin/boot_disable_es.sh"

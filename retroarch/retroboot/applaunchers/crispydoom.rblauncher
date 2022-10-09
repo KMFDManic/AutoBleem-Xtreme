@@ -1,0 +1,5 @@
+# Retroboot App Launcher
+
+LAUNCHER_LABEL="Crispy Doom"
+LAUNCHER_DESCRIPTION="Crispy DOOM / Hexen / Heretic"
+LAUNCHER_SCRIPT_PATH="/media/retroarch/apps/crispydoom/launchcrispydoom.sh"

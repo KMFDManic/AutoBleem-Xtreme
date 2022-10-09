@@ -1,0 +1,4 @@
+KERNEL=="js0",SUBSYSTEMS=="input",SYMLINK+="input/joystick0"
+KERNEL=="js1",SUBSYSTEMS=="input",SYMLINK+="input/joystick1"
+KERNEL=="js2",SUBSYSTEMS=="input",SYMLINK+="input/joystick2"
+KERNEL=="js3",SUBSYSTEMS=="input",SYMLINK+="input/joystick3"

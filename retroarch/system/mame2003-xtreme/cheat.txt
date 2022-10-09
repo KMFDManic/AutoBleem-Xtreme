@@ -1,0 +1,3341 @@
+This document consists of sections that have been removed from the cheat.dat
+file mainly to reduce the size of the .dat file. This cheat.txt file must be
+distributed with the cheat.dat file. Don't forget whatever program you are
+reading this with you can also use to read & add things to the cheat.dat file
+with.
+
+This CHEAT.TXT is distributed with the following cheat.dat file:-
+
+MAME CHEAT FILE Release Date: 31 Mar 2009 (Base release for MAME 0.126)
+
+
+SECTIONS
+-======-
+
+Simple
+1.  Basic Instructions on enabling cheats in MAME
+2.  Cheat Description Meanings
+3.  Cheat Ordering
+
+Advanced
+4.  Cheat Engine Commands (to customise the cheat UI)
+5.  Cheat Format Information
+6.  How to Pre-Enable cheats
+7.  Dynamic Cheat Finding method
+
+Credits
+8.  General Credits
+9.  Games utilising ROM cheats with credits
+10. Games utilising EEPROM/Mapped Memory cheats with credits
+11. Games utilising Forced Range cheats with credits
+12. Games utilising Dynamic (Relative Addressing) cheats with credits
+
+Work to be done
+12. General list of work to be done
+
+
+------------------------------------------------------------------------------
+         SECTION 1     Basic Instructions on enabling cheats in MAME
+------------------------------------------------------------------------------
+
+What to do with the cheat.dat file file :-
+
+Step 1 (what to do with the cheat.dat file )
+============================================
+
+First of all unzip the cheat.dat file into the same directory as where the
+MAME.EXE is (All platforms apart from Mac OS 9/X ).
+
+For MacMAME the cheat.dat file should be in:-
+${HOME}/Documents/MacMAME User Data/Misc Support Files
+
+For MAME OS X the cheat.dat file should be in:-
+${HOME}/Library/Application Support/MAME OS X
+
+
+Step 2 (Enable the MAME Cheat Engine)
+=====================================
+
+As standard the MAME Cheat Engine is turned OFF, there are several ways of
+turning it ON depending on which platform you are running MAME on.
+
+MAMEW:  This is the standard MAME command line compile, go to your MAME
+        directory open up the MAME.INI file with a text editor (the one you
+        are using to read this will probably do!).
+          Find '### Mame CORE misc options ###' and change 'cheat 0' to
+        'cheat 1'. Note: If your MAME.EXE is named something else like
+        MAME067.EXE then you will need to edit MAME067.INI rather than
+        MAME.INI!
+          If you have no INI file then just start MAME from the command-line
+        with the -createconfig option  eg. 'MAME -createconfig'. If you
+        manually use MAME every time from the command-line you can also
+        just add '-cheat' to the command line.
+
+MAME32: This is the MAME with build in frontend compile for Windows. Go to
+        the Options Menu, and select "Default Options". Go to the
+        Miscellaneous tab and check the box that says "Enable Game Cheats".
+
+DMAME:  This is the DOS MAME compile, go to your MAME directory open up the
+        MAME.CFG file with a text editor (the one you are using to read this
+        will probably do!).
+          Find 'cheat off' and change it to 'cheat on'. Note: If your
+        MAME.EXE is named something else like MAME067.EXE then you will need
+        to edit MAME067.CFG rather than MAME.CFG! If you have no CFG file
+        then just start MAME from the command-line with the -createconfig
+        option eg. 'MAME -createconfig'. If you manually use MAME every time
+        from the command-line you can also just add '-cheat' to the
+        command-line.
+
+UNIX:   For the UNIX/LINUX compiles just follow the instructions for DMAME
+        the DOS compile.
+
+OS9/X:  From the front-end, go to the Misc tab, and check the box that says
+        "Allow Cheats".
+
+
+Step 3 (Cheat!)
+===============
+
+In-game press TAB and follow your nose......
+Left and Right cursor toggles cheats ON and OFF, ENTER turns on one shot cheats
+and SHIFT ENTER displays the cheat comments if there are any (the ON/OFF/SET
+will be in reverse video if there are any comments).
+
+
+------------------------------------------------------------------------------
+                 SECTION 2     Cheat Description Meanings
+------------------------------------------------------------------------------
+
+GENERAL NOTES ABOUT CHEAT DESCRIPTIONS AND WHAT THEY MEAN:
+----------------------------------------------------------
+NOTES: The cheat descriptions use the following terms, this is what they
+       actually mean:
+
+Get+Now! means the cheat is a type 00000001 cheat and so it is a temporary cheat -
+         it changes the memory and then deactivates. Type 01 is ideal for
+         getting a particular weapon or feature, also needed for a Finish
+         Level Now! cheat.
+
+Always   means the cheat is permanent (several cheat types) idea for always
+         having a certain weapon or feature eg always have 3 rainbows on
+         Rainbow Islands.
+
+Infinite means exactly what it says - you will have an inexhaustible supply of
+         the named item be it lives, time, ammo or something else. On some
+         rare occasions you may need to deactivate the cheat before you can
+         finish a level, if this need to be done you will see F6 at the end
+         of the cheat description.
+
+Select current level  - Select a level and you can progress to it by losing a
+                        life. You should only activate this type of cheat
+                        during game play or according to the comments.
+
+Select next level - Select a level and when you complete the current level you
+                    will progress straight to the selected level. You can also
+                    activate this on the title/attract screens though the
+                    effects cannot always be guaranteed! (you will either
+                    start on the selected level or the next level after the
+                    selected one or level 1). A far better method if you want
+                    to select the starting level from the title screen is to
+                    use the method that I thought of for Metrocross. See
+                    Metrocross remarks for info.
+
+Select Score - This cheat allows you to select your score or/and the other
+               player's score, ideal for sports games where you need a certain
+               score to win and/or progress. It must ONLY be activated during
+               game play. Also note the score may not display correctly until
+               the score has changed properly!
+
+
+------------------------------------------------------------------------------
+                       SECTION 3     Cheat Ordering
+------------------------------------------------------------------------------
+
+This is how I order the cheats - I try and stick to it as often as I can.
+Some games don't conform to this standard either because it's better as is or
+the cheats were done a while ago and I haven't changed them. DO NOT report any
+games that don't follow this standard - it's pretty low on the list of
+priorities right now.
+
+OVERALL CHEAT ORDER
+-------------------
+
+gamename in format '; [ long game name ]'
+section1
+section2
+section3 (if applicable)
+section4
+
+WHAT'S EACH SECTION ABOUT?
+--------------------------
+
+Section 1 contains all the cheats valid for all players. Infinite Credits will
+come first normally.
+
+Section 2 contains cheats for individual players, split up so that all PL1
+cheats are together and all PL2 cheats are together. Normally there will be the
+same cheats for each player and the order of the cheats should be the same as
+for the other player.
+
+Section 3 contains cheats that are hard to button-hole and have fairly obscure
+effects on the game that only the die-hard player of that game may really want.
+These sort of cheats can often be merged into section 2, though in some
+circumstances the sheer number of these cheats will seriously clutter out the
+normal everyday cheats (section 2). In that case they should be separated into
+another section and the PL1 / PL2 separation in that section should be maintained
+if possible.
+
+Section 4 contains any none cheat related things. Eg. Sound test timer and region
+switch  codes.
+
+WHAT'S IN EACH SECTION
+----------------------
+
+The normal order of cheats will be if there is no PL1 or PL2 specific cheats.
+If a cheat is specific to all players it will promote it up the list.
+
+Infinite Credits
+Infinite Time       (if 'Finish this Round Now!' is worthwhile it should
+                     directly follow this cheat)
+Infinite Lives
+Infinite Energy     (if 'Drain all Energy Now!' is worthwhile it should
+                     directly follow this cheat)
+Infinite Ammo
+Infinite Bombs
+Invincibility       (if Invincibility doesn't turn off after a short while of
+                     disabling it then there should be separate 'ON' and 'OFF'
+                     cheats)
+Always have this weapon
+Get this weapon Now!
+Play with this character Now!
+Select starting level
+Select current level
+Select next level
+
+SPACING/BLANK COMMENTS
+----------------------
+
+Blank Comment cheats should be added to improve the readability of the cheats
+in the cheat engine were appropriate. 
+
+There should be a blank after section 1 if section 2 has 3 or more cheat entries
+for each player OR if section 1 has itself got three or more cheat entries.
+
+If there are 3 or more cheat entries for each player in section 2 then the 
+entries for each player should be seperated with a blank comment.
+
+If section 3 exists it should ideally be preceded by a blank comment.
+
+If section 4 exists it should ideally be preceded by a blank comment.
+
+
+------------------------------------------------------------------------------
+        SECTION 4     Cheat Engine Commands (to customise the cheat UI)
+------------------------------------------------------------------------------
+
+Cheat Engine Commands:
+----------------------
+
+These special cheat lines are used to set global preferences for the cheat
+engine. If you don't understand binary then you really shouldn't be
+messing with it. Here is a slightly techie description
+
+    LSB
+0000000
+6543210
+------0  Cheat AutoSave = OFF
+------1  Cheat AutoSave = ON (Recommended)
+----00-  Search Box Style = Minimum
+----01-  Search Box Style = Classic (Recommended)
+----10-  Search Box Style = Advanced
+---0---  Search Labels = Show
+---1---  Search Labels = Hide (Recommended)
+--0----  Activation Key Message = OFF
+--1----  Activation Key Message = ON (Recommended)
+-0-----  Old Cheat Format Support = OFF
+-1-----  Old Cheat Format Support = ON (Recommended)
+0------  Cheat Engine Debug Mode = OFF (Recommended)
+1------  Cheat Engine Debug Mode = ON (Don't bother!)
+
+
+So to have the recommended settings we will have Binary 0111011 which if we put
+into the Windows Calculator (in Scientific Mode) with the BIN button selected
+and then convert the number to HEX (by pressing the HEX button) we will get 3B.
+
+So just add this into the cheat.dat file for the required options:-
+
+:_command:0000003B
+
+To keep things simple this is already included in the cheat.dat file as standard, so if
+you are not happy with any of the settings then please change it.
+
+
+
+------------------------------------------------------------------------------
+                  SECTION 5     Cheat Format Information
+------------------------------------------------------------------------------
+
+CHEAT FORMAT INFORMATION
+------------------------
+
+The cheat format is very powerful, though the sheer number of options make it
+hard to understand. On a whole cheats using the cheat format are best made by
+setting the appropriate options on the edit cheat page and then saving the said
+cheat. There are some exceptions though - as occasionally it's harder if not
+impossible to do exactly what you want using the edit function. This
+information will hopefully help you understand the cheat format.
+
+Cheat Format:
+-------------
+
+This section is based heavily on the information found in cheat.c. I've just
+edited it to make it a tad easier for me to understand, in fact the act of
+editing this helped me a lot.
+
+:gamename:12345678:87654321:12345678:FFFFFFFF:Cheat Description:Comment
+^^        ^        ^        ^        ^        ^                 ^
+12        3        4        5        6        7                 8
+
+1. Notice the colon in front of the game name, this is very important so don't
+   forget it or lose it when cut and pasting cheats
+2. Name of the game (short name) [zip file or directory]
+3. Cheat Type Field in hexadecimal (how to poke)
+4. Address in Hexadecimal (where to poke)
+5. Data to put at this address in hexadecimal (what to poke)
+6. Extended Data Field - used for mask and some other stuff (see below) usually
+   FFFFFFFF
+7. Description of the cheat (25 to 255 characters max - check each game for
+   correct display) eg. 'Invincibility PL1'
+8. Extra Comment about the cheat if needed eg 'Turn it OFF at the end of the
+   level!'
+
+Type Field:
+-----------
+
+MSB                             LSB
+33222222 22221111 11111100 00000000
+10987654 32109876 54321098 76543210
+
+Persistence
+-------- -------- -------- -------0 the cheat is poked with respect to the
+                                    Normal/Delay options and the cheat remains
+                                    in the active list
+-------- -------- -------- -------1 the cheat is poked only once and with
+																		respect to the Normal/Delay options and is
+																		removed from the active list
+
+Operation (Used with the Extended Data Field)
+-------- ----0--- -------- ---00--- Write with Mask - If the cheat is in the
+                                    active list it is poked using a mask to
+                                    mark which bits are to be written to.
+                                    (used for most cheats as standard)
+-------- ----00-- -------- ---01--- Add - If the cheat is in the active list it
+                                    is poked to add a value till a limit is
+                                    reached, the limit will not be exceeded!
+-------- ----01-- -------- ---01--- Subtract - If the cheat is in the active
+                                    list it is poked to subtract a value till
+                                    a limit is reached, the limit will not be
+                                    exceeded!
+-------- ----00-- -------- ---10--- Force Range - If the cheat is in the active
+                                    list and if the value of an address is
+                                    outside a range it will be poked to the
+                                    specified value which should be inside the
+                                    range. If 24/32 bits then the Extended data
+                                    field is the maximum not the range.
+-------- ----01-- -------- ---10--- Force Range - as Force Range above with one
+                                    exception. If 24/32 bits then the Extended
+                                    data field is the minimum.
+-------- ----00-- -------- ---11--- Set - If the cheat is in the active list it
+                                    is poked to set the specified bits (set
+                                    them to 1) from the value field on the
+                                    specified address. MOSTLY REDUNDANT -
+                                    'Write with Mask' can/should be used unless
+                                    it's a relative address cheat!
+-------- ----01-- -------- ---11--- Clear - If the cheat is in the active list
+                                    it is poked to clear the specified bits
+                                    (reset them to 0) from the value field on
+                                    the specified address. MOSTLY REDUNDANT -
+                                    'Write with Mask' can/should be used unless
+                                    it's a relative address cheat!
+-------- ----1--- -------- ---00--- Write if Match - If the cheat is in the
+                                    active list and if the value of an address
+                                    is equal to a set value then it will be
+                                    poked to the specified value.
+-------- ----1--- -------- ---01--- Unused!
+-------- ----1--- -------- ---10--- Unused!
+-------- ----1--- -------- ---11--- Nothing! (NOP)
+
+Type (Normal/Delay)
+-------- -------- -------- 000--00- No Delay/Normal - If the cheat is in the
+                                    active list it is poked at a rate of once
+                                    every frame.
+-------- -------- -------- 001--00- 1 Sec Delay - If the cheat is in the active
+                                    list it is poked at a rate of once every
+                                    one second.
+-------- -------- -------- 010--00- 2 Secs Delay - If the cheat is in the
+                                    active list it is poked at a rate of once
+                                    every two seconds.
+-------- -------- -------- 011--00- 3 Secs Delay - If the cheat is in the
+                                    active list it is poked at a rate of once
+                                    every three seconds.
+-------- -------- -------- 100--00- 4 Secs Delay - If the cheat is in the
+                                    active list it is poked at a rate of once
+                                    every four seconds.
+-------- -------- -------- 101--00- 5 Secs Delay - If the cheat is in the
+                                    active list it is poked at a rate of once
+                                    every five seconds.
+-------- -------- -------- 110--00- 6 Secs Delay - If the cheat is in the
+                                    active list it is poked at a rate of once
+                                    every six seconds.
+-------- -------- -------- 111--00- 7 Secs Delay - If the cheat is in the
+                                    active list it is poked at a rate of once
+                                    every seven seconds.
+
+Type (Wait for Modification)
+-------- -------- -------- 000--01- No Delay - If the cheat is in the active
+                                    list it is poked as soon as it changes.
+-------- -------- -------- 001--01- 1 Sec Delay - If the cheat is in the active
+                                    list it is poked one second after it has
+                                    changed.
+-------- -------- -------- 010--01- 2 Secs Delay - If the cheat is in the
+                                    active list it is poked two seconds after
+                                    it has changed.
+-------- -------- -------- 011--01- 3 Secs Delay - If the cheat is in the
+                                    active list it is poked three seconds after
+                                    it has changed.
+-------- -------- -------- 100--01- 4 Secs Delay - If the cheat is in the
+                                    active list it is poked four seconds after
+                                    it has changed.
+-------- -------- -------- 101--01- 5 Secs Delay - If the cheat is in the
+                                    active list it is poked five seconds after
+                                    it has changed.
+-------- -------- -------- 110--01- 6 Secs Delay - If the cheat is in the
+                                    active list it is poked six seconds after
+                                    it has changed.
+-------- -------- -------- 111--01- 7 Secs Delay - If the cheat is in the
+                                    active list it is poked seven seconds after
+                                    it has changed.
+
+Type (Ignore if Decrementing)
+-------- -------- -------- 000--10- Any Decrement - If the cheat is in the
+                                    active list it is poked as long as the
+                                    value in the address hasn't decremented at
+                                    ALL.
+-------- -------- -------- 001--10- Decrement by 1 - If the cheat is in the
+                                    active list it is poked as long as the
+                                    value in the address hasn't decremented by
+                                    exactly 1.
+-------- -------- -------- 010--10- Decrement by 2 - If the cheat is in the
+                                    active list it is poked as long as the
+                                    value in the address hasn't decremented by
+                                    exactly 2.
+-------- -------- -------- 011--10- Decrement by 3 - If the cheat is in the
+                                    active list it is poked as long as the
+                                    value in the address hasn't decremented by
+                                    exactly 3.
+-------- -------- -------- 100--10- Decrement by 4 - If the cheat is in the
+                                    active list it is poked as long as the
+                                    value in the address hasn't decremented by
+                                    exactly 4.
+-------- -------- -------- 101--10- Decrement by 5 - If the cheat is in the
+                                    active list it is poked as long as the
+                                    value in the address hasn't decremented by
+                                    exactly 5.
+-------- -------- -------- 110--10- Decrement by 6 - If the cheat is in the
+                                    active list it is poked as long as the
+                                    value in the address hasn't decremented by
+                                    exactly 6.
+-------- -------- -------- 111--10- Decrement by 7 - If the cheat is in the
+                                    active list it is poked as long as the
+                                    value in the address hasn't decremented by
+                                    exactly 7.
+
+Type (Watchpoint) {These cannot be linked and must be permanent}
+         [See 'Watches' below to see how to use the data field for more power!]
+-------- -------- -------- 000--11- Hex & No Label - A watchpoint with a
+                                    hexadecimal display is placed on the
+                                    address & there is no label
+-------- -------- -------- 001--11- Dec & No Label - A watchpoint with a
+                                    decimal display is placed on the address &
+                                    there is no label.
+-------- -------- -------- 010--11- Bin & No Label - A watchpoint with a binary
+                                    display is placed on the address & there is
+                                    no label.
+-------- -------- -------- 011--11- ASCII & No Label - A watchpoint with a
+                                    ASCII display is placed on the address &
+                                    there is no label.
+-------- -------- -------- 100--11- Hex & Label - A watchpoint with a
+                                    hexadecimal display is placed on the
+                                    address & the label is copied from the
+                                    comment field.
+-------- -------- -------- 101--11- Dec & Label - A watchpoint with a decimal
+                                    display is placed on the address & the
+                                    label is copied from the comment field.
+-------- -------- -------- 110--11- Bin & Label - A watchpoint with a binary
+                                    display is placed on the address & the
+                                    label is copied from the comment field.
+-------- -------- -------- 111--11- ASCII & Label - A watchpoint with a ASCII
+                                    display is placed on the address & the
+                                    label is copied from the comment field.
+
+User-Selected Value (let the user select the poking value at runtime - can not
+                     be used in a list cheat)
+-------- -------- ----0001 -------- The user selects a decimal value
+                                    from 0 to byte (display : 0 to byte)
+-------- -------- ----0011 -------- The user selects a decimal value
+                                    from 0 to byte (display : 1 to byte+1)
+-------- -------- ----0101 -------- The user selects a decimal value
+                                    from 1 to byte (display : 1 to byte)
+-------- -------- ----0111 -------- The user selects a decimal value
+                                    from 1 to byte (display : 1 to byte+1)
+-------- -------- ----1001 -------- The user selects a BCD value
+                                    from 0 to byte (display : 0 to byte)
+-------- -------- ----1011 -------- The user selects a BCD value
+                                    from 0 to byte (display : 1 to byte+1)
+-------- -------- ----1101 -------- The user selects a BCD value
+                                    from 1 to byte (display : 1 to byte)
+-------- -------- ----1111 -------- The user selects a BCD value
+                                    from 1 to byte (display : 1 to byte+1)
+-------- -------- ----0010 -------- NOT CURRENTLY USED (Due to BIT cheat type - unlikely to be used)
+-------- -------- ----0100 -------- NOT CURRENTLY USED (Due to BIT cheat type - unlikely to be used)                                    
+-------- -------- ----1000 -------- NOT CURRENTLY USED (Due to BIT cheat type - unlikely to be used)  
+-------- -------- ----1010 -------- NOT CURRENTLY USED (Due to BIT cheat type - unlikely to be used)                                    
+-------- -------- ----1100 -------- NOT CURRENTLY USED (Due to BIT cheat type - unlikely to be used)  
+
+Prefill (Prefills a address with a value before looking at it - always used in
+         conjunction with 'Wait for Modification')
+-------- -------- --00---- -------- No Prefill used (normal)
+-------- -------- --01---- -------- Prefill with 0xFF - pokes the address with
+                                    $FF ONCE before anything else! (if prefill
+                                    is used this should be the default)
+-------- -------- --10---- -------- Prefill with 0x00 - pokes the address with
+                                    $00 ONCE before anything else!
+-------- -------- --11---- -------- Prefill with 0x01 - pokes the address with
+                                    $01 ONCE before anything else!
+
+Link/Options
+-------- -------- -1------ -------- Don't add to list - makes sure this cheat
+                                    doesn't show up in the list, use with
+                                    pre-enable & Assign Activation Key
+                                    & CPU Overclock.
+-------- -------0 -------- -------- Single Part/First Cheat in Linked Cheat - A
+                                    single part or 1st part of a linked cheat.
+-------- ------01 -------- -------- Linked\List & Use Value Field - Links this
+                                    cheat to the previous 'Single Part/First
+                                    Cheat in Linked Cheat' in the cheat file,
+                                    value field is used as the poking value.
+-------- ------11 -------- -------- Linked\List & Copy Previous Value - Links
+                                    this cheat to the previous 'Single
+                                    Part/First Cheat in Linked Cheat' in the
+                                    cheat file, the value for this cheat is
+                                    determined by taking the value read from
+                                    the previous cheat and adding the value
+                                    stored in the data field.
+-------- -------- 1------- -------- Link Extension - this allows multi-part 
+                                    cheats to be used in a Linked List. For this
+                                    to work Link Extension should be used in a  
+                                    similar way to the linked option in that the
+                                    any parts after the first part should have this
+                                    option set.                             
+
+Bytes Used
+-------- --00---- -------- -------- Bytes to Poke = 1 - The address is poked
+                                    with a byte (8 bit) value.
+-------- --01---- -------- -------- Bytes to Poke = 2 - The address is poked
+                                    with 2 bytes (16 bit) value.
+-------- --10---- -------- -------- Bytes to Poke = 3 - The address is poked
+                                    with 3 bytes (24 bit) value.
+-------- --11---- -------- -------- Bytes to Poke = 4 - The address is poked
+                                    with 4 bytes (32 bit) value.
+
+Endianness
+-------- -0------ -------- -------- Same endianness as target processor/Generic
+                                    addresses are big endian
+-------- -1------ -------- -------- Different endianness as target
+                                    processor/Generic addresses are little
+                                    endian.
+
+Restore previous value on disable (this should always be used with non one-shot
+                                   ROM cheats)
+-------- 1------- -------- -------- Restore previous value on disable - Returns
+                                    the value being poked to it's original
+                                    value on cheat switch OFF.
+
+Address/ Effective Address
+000xxxxx -------- -------- -------- Standard Memory - This cheat will write
+                                    into 'normal' memory, xxxxx denotes the CPU
+                                    index.
+001xxxxx -------- -------- -------- Memory Region -  This cheat can often be
+                                    used to write over ROM addresses. xxxxx
+                                    denotes the ROM region. Use with 'Restore
+                                    previous value on disable' in normal
+                                    circumstances!
+010xxxxx -------- -------- -------- Write Handler Mapped Memory - This cheat
+                                    will write into the driver declaration of
+                                    the memory. xxxxx denotes the CPU index.
+100xxx00 -------- -------- -------- Relative Address (CPU) with 8 bit address
+                                    size - This cheat allows you to write
+                                    indirect to memory using a 8 bit base
+                                    address and an index, ie. dynamic cheats!
+                                    xxx denotes the CPU index.
+                                    [REDUNDANT DUE TO 8 BIT ADDRESS SIZE]
+100xxx01 -------- -------- -------- Relative Address (CPU) with 16 bit address
+                                    size - This cheat allows you to write
+                                    indirect to memory using a 16 bit base
+                                    address and an index, ie. dynamic cheats!
+                                    xxx denotes the CPU index.
+100xxx10 -------- -------- -------- Relative Address (CPU) with 24 bit address
+                                    size - This cheat allows you to write
+                                    indirect to memory using a 24 bit base
+                                    address and an index, ie. dynamic cheats!
+                                    xxx denotes the CPU index.
+100xxx11 -------- -------- -------- Relative Address (CPU) with 32 bit address
+                                    size - This cheat allows you to write
+                                    indirect to memory using a 32 bit base
+                                    address and an index, ie. dynamic cheats!
+                                    xxx denotes the CPU index [Normally used -
+                                    others all redundant really]
+                                    Note: Relative Address cheats all use an
+                                    implicit mask of FFFFFFFF. So any other
+                                    operation (including watch) other than
+                                    Set/Clear will return a no-op.
+101----- -------- -------- -------- Direct Program Space Write - this can be
+                                    used for ROM cheats that used encrypted
+                                    memory which would not otherwise be
+                                    possible.
+110----- -------- -------- -------- Cheatscript (currently not implemented).
+111----- -------- -------- -------- Unused!
+
+Custom Cheat Types
+01100000 00000000 00000000 00000000 Comment in Cheat List - if it's a comment
+                                    cheat it's not linkable or selectable so it
+                                    can't be ganged with other cheat flags.
+01100001 -------- -------- -------- EEPROM - This cheat will allow writing into
+                                    EEPROM.
+01100010 00000000 00000000 0000000- Header Cheat in a Select from List cheat -
+                                    first cheat in a list type cheat. LSB
+                                    should be set for info purposes. Value &
+                                    Address fields should = 00000000.
+01100011 -------0 -1------ -------- Assign Activation Key - see 'Assign
+                                    Activation Key' below, also see Section 6
+                                    'How to Pre-Enable cheats' below as the
+                                    same rules apply.
+01100100 -------0 -1------ -------- Pre-Enable - see Section 6 'How to
+                                    Pre-Enable cheats' below.
+01100101 -------0 -1------ -------- CPU Overclock - see 'Overclock' below
+01100110 -------- -------- -------- Unused
+01100111 -------- -------- -------- Unused
+01101000 -------- -------- -------- Unused
+01101001 -------- -------- -------- Unused
+01101010 -------- -------- -------- Unused
+01101011 -------- -------- -------- Unused
+01101100 -------- -------- -------- Unused
+01101101 -------- -------- -------- Unused
+01101110 -------- -------- -------- Unused
+01101111 -------- -------- -------- Unused
+01110000 -------- -------- -------- Unused
+01110001 -------- -------- -------- Unused
+01110010 -------- -------- -------- Unused
+01110011 -------- -------- -------- Unused
+01110100 -------- -------- -------- Unused
+01110101 -------- -------- -------- Unused
+01110110 -------- -------- -------- Unused
+01110111 -------- -------- -------- Unused
+01111000 -------- -------- -------- Unused
+01111001 -------- -------- -------- Unused
+01111010 -------- -------- -------- Unused
+01111011 -------- -------- -------- Unused
+01111100 -------- -------- -------- Unused
+01111101 -------- -------- -------- Unused
+01111110 -------- -------- -------- Unused
+01111111 -------- -------- -------- Unused
+
+
+
+
+Extended Data Field:
+--------------------
+
+ [ Write with Mask ]  The field will store a mask containing which bits are
+                      modified by the operation. For normal operation, set the
+                      mask to 0xFFFFFFFF and only change it if you actually
+                      need to!
+                      Example code: data = (data & ~mask) | (input & mask);
+
+ [ Force Range ]      This field will store the allowed range of values, or
+                      the limit value (if a 24 or 32 bit value is being poked)
+
+                      8 bit writes:    0x0000AABB
+                      16 bit writes:   0xAAAABBBB
+                      24 bit writes:   0x00CCCCCC
+                      32 bit writes:   0xCCCCCCCC
+
+                      AA = minimum value accepted.
+                      BB = maximum value accepted.
+                      CC = limit value, operation parameters selects max or min
+                           limit.
+
+ [ Add/Subtract ]     The field will store either the minimum or maximum
+                      boundary for modification, depending on the operation
+                      parameter.
+
+ [ Relative Address ] The extend data field will store the the signed offset to
+                      be applied to the address read. Because of this, any
+                      operation using the extend data field may have
+                      interesting results. Use the special set/clear bits
+                      operations instead of a masked write.
+
+Information About the New Types of Cheats:
+------------------------------------------
+
+Select Cheat Type: (01100010 -------0 -------- --------) 0x62000000
+
+                      This may be used only as the first cheat of a linked
+                      cheat. In the "Enable/Disable Cheat" menu, instead of
+                      simple listing On/Off or Set as the menu option, the
+                      cheat engine will list the name fields of each of the
+                      sub-cheats. If the current selected sub-cheat is a one-shot
+                      cheat, pressing Enter will activate the currently
+                      selected sub-cheat. If the sub-cheat is an on/off cheat,
+                      the currently selected sub-cheat (and only that sub cheat)
+                      will be activated.
+
+Assign Activation Key: (01100011 -------- -1------ --------) 0x63004000
+
+                      Assigns an activation key to a cheat. Put the index of
+                      the cheat you want to modify in the address field, then
+                      put the key index in the data field.
+
+                      Example: to set the second cheat in the cheat list to
+                      activate when "Q" is pressed, add this cheat to the file:-
+                      :gamename:63004000:00000001:00000010:00000000:
+
+                      /* digital keyboard codes */
+                        00   KEYCODE_A,     16   KEYCODE_W,      2D   KEYCODE_F10,            44   KEYCODE_INSERT,        5B   KEYCODE_PLUS_PAD,
+                        01   KEYCODE_B,     17   KEYCODE_X,      2E   KEYCODE_F11,            45   KEYCODE_DEL,           5C   KEYCODE_DEL_PAD,
+                        02   KEYCODE_C,     18   KEYCODE_Y,      2F   KEYCODE_F12,            46   KEYCODE_HOME,          5D   KEYCODE_ENTER_PAD,
+                        03   KEYCODE_D,     19   KEYCODE_Z,      30   KEYCODE_F13,            47   KEYCODE_END,           5E   KEYCODE_PRTSCR,
+                        04   KEYCODE_E,     1A   KEYCODE_0,      31   KEYCODE_F14,            48   KEYCODE_PGUP,          5F   KEYCODE_PAUSE,
+                        05   KEYCODE_F,     1B   KEYCODE_1,      32   KEYCODE_F15,            49   KEYCODE_PGDN,          60   KEYCODE_LSHIFT,
+                        06   KEYCODE_G,     1C   KEYCODE_2,      33   KEYCODE_ESC,            4A   KEYCODE_LEFT,          61   KEYCODE_RSHIFT,
+                        07   KEYCODE_H,     1D   KEYCODE_3,      34   KEYCODE_TILDE,          4B   KEYCODE_RIGHT,         62   KEYCODE_LCONTROL,
+                        08   KEYCODE_I,     1E   KEYCODE_4,      35   KEYCODE_MINUS,          4C   KEYCODE_UP,            63   KEYCODE_RCONTROL,
+                        09   KEYCODE_J,     1F   KEYCODE_5,      36   KEYCODE_EQUALS,         4D   KEYCODE_DOWN,          64   KEYCODE_LALT,
+                        0A   KEYCODE_K,     20   KEYCODE_6,      37   KEYCODE_BACKSPACE,      4E   KEYCODE_0_PAD,         65   KEYCODE_RALT,
+                        0B   KEYCODE_L,     21   KEYCODE_7,      38   KEYCODE_TAB,            4F   KEYCODE_1_PAD,         66   KEYCODE_SCRLOCK,
+                        0C   KEYCODE_M,     22   KEYCODE_8,      39   KEYCODE_OPENBRACE,      50   KEYCODE_2_PAD,         67   KEYCODE_NUMLOCK,
+                        0D   KEYCODE_N,     23   KEYCODE_9,      3A   KEYCODE_CLOSEBRACE,     51   KEYCODE_3_PAD,         68   KEYCODE_CAPSLOCK,
+                        0E   KEYCODE_O,     24   KEYCODE_F1,     3B   KEYCODE_ENTER,          52   KEYCODE_4_PAD,         69   KEYCODE_LWIN,
+                        0F   KEYCODE_P,     25   KEYCODE_F2,     3C   KEYCODE_COLON,          53   KEYCODE_5_PAD,         6A   KEYCODE_RWIN,
+                        10   KEYCODE_Q,     26   KEYCODE_F3,     3D   KEYCODE_QUOTE,          54   KEYCODE_6_PAD,         6B   KEYCODE_MENU,
+                        11   KEYCODE_R,     27   KEYCODE_F4,     3E   KEYCODE_BACKSLASH,      55   KEYCODE_7_PAD,
+                        12   KEYCODE_S,     28   KEYCODE_F5,     3F   KEYCODE_BACKSLASH2,     56   KEYCODE_8_PAD,
+                        13   KEYCODE_T,     29   KEYCODE_F6,     40   KEYCODE_COMMA,          57   KEYCODE_9_PAD,
+                        14   KEYCODE_U,     2A   KEYCODE_F7,     41   KEYCODE_STOP,           58   KEYCODE_SLASH_PAD,
+                        15   KEYCODE_V,     2B   KEYCODE_F8,     42   KEYCODE_SLASH,          59   KEYCODE_ASTERISK,
+                        16   KEYCODE_W,     2C   KEYCODE_F9,     43   KEYCODE_SPACE,          5A   KEYCODE_MINUS_PAD,
+
+                        /* digital joystick codes */
+                        6C   JOYCODE_1_LEFT,         9A   JOYCODE_3_UP,           C8   JOYCODE_5_BUTTON1,       F6   JOYCODE_7_BUTTON3,
+                        6D   JOYCODE_1_RIGHT,        9B   JOYCODE_3_DOWN,         C9   JOYCODE_5_BUTTON2,       F7   JOYCODE_7_BUTTON4,
+                        6E   JOYCODE_1_UP,           9C   JOYCODE_3_BUTTON1,      CA   JOYCODE_5_BUTTON3,       F8   JOYCODE_7_BUTTON5,
+                        6F   JOYCODE_1_DOWN,         9D   JOYCODE_3_BUTTON2,      CB   JOYCODE_5_BUTTON4,       F9   JOYCODE_7_BUTTON6,
+                        70   JOYCODE_1_BUTTON1,      9E   JOYCODE_3_BUTTON3,      CC   JOYCODE_5_BUTTON5,       FA   JOYCODE_7_BUTTON7,
+                        71   JOYCODE_1_BUTTON2,      9F   JOYCODE_3_BUTTON4,      CD   JOYCODE_5_BUTTON6,       FB   JOYCODE_7_BUTTON8,
+                        72   JOYCODE_1_BUTTON3,      A0   JOYCODE_3_BUTTON5,      CE   JOYCODE_5_BUTTON7,       FC   JOYCODE_7_BUTTON9,
+                        73   JOYCODE_1_BUTTON4,      A1   JOYCODE_3_BUTTON6,      CF   JOYCODE_5_BUTTON8,       FD   JOYCODE_7_BUTTON10,
+                        74   JOYCODE_1_BUTTON5,      A2   JOYCODE_3_BUTTON7,      D0   JOYCODE_5_BUTTON9,       FE   JOYCODE_7_BUTTON11,
+                        75   JOYCODE_1_BUTTON6,      A3   JOYCODE_3_BUTTON8,      D1   JOYCODE_5_BUTTON10,      FF   JOYCODE_7_BUTTON12,
+                        76   JOYCODE_1_BUTTON7,      A4   JOYCODE_3_BUTTON9,      D2   JOYCODE_5_BUTTON11,     100   JOYCODE_7_BUTTON13,
+                        77   JOYCODE_1_BUTTON8,      A5   JOYCODE_3_BUTTON10,     D3   JOYCODE_5_BUTTON12,     101   JOYCODE_7_BUTTON14,
+                        78   JOYCODE_1_BUTTON9,      A6   JOYCODE_3_BUTTON11,     D4   JOYCODE_5_BUTTON13,     102   JOYCODE_7_BUTTON15,
+                        79   JOYCODE_1_BUTTON10,     A7   JOYCODE_3_BUTTON12,     D5   JOYCODE_5_BUTTON14,     103   JOYCODE_7_BUTTON16,
+                        7A   JOYCODE_1_BUTTON11,     A8   JOYCODE_3_BUTTON13,     D6   JOYCODE_5_BUTTON15,     104   JOYCODE_7_START,
+                        7B   JOYCODE_1_BUTTON12,     A9   JOYCODE_3_BUTTON14,     D7   JOYCODE_5_BUTTON16,     105   JOYCODE_7_SELECT,
+                        7C   JOYCODE_1_BUTTON13,     AA   JOYCODE_3_BUTTON15,     D8   JOYCODE_5_START,        106   JOYCODE_8_LEFT,
+                        7D   JOYCODE_1_BUTTON14,     AB   JOYCODE_3_BUTTON16,     D9   JOYCODE_5_SELECT,       107   JOYCODE_8_RIGHT,
+                        7E   JOYCODE_1_BUTTON15,     AC   JOYCODE_3_START,        DA   JOYCODE_6_LEFT,         108   JOYCODE_8_UP,
+                        7F   JOYCODE_1_BUTTON16,     AD   JOYCODE_3_SELECT,       DB   JOYCODE_6_RIGHT,        109   JOYCODE_8_DOWN,
+                        80   JOYCODE_1_START,        AE   JOYCODE_4_LEFT,         DC   JOYCODE_6_UP,           10A   JOYCODE_8_BUTTON1,
+                        81   JOYCODE_1_SELECT,       AF   JOYCODE_4_RIGHT,        DD   JOYCODE_6_DOWN,         10B   JOYCODE_8_BUTTON2,
+                        82   JOYCODE_2_LEFT,         B0   JOYCODE_4_UP,           DE   JOYCODE_6_BUTTON1,      10C  JOYCODE_8_BUTTON3,
+                        83   JOYCODE_2_RIGHT,        B1   JOYCODE_4_DOWN,         DF   JOYCODE_6_BUTTON2,      10D  JOYCODE_8_BUTTON4,
+                        84   JOYCODE_2_UP,           B2   JOYCODE_4_BUTTON1,      E0   JOYCODE_6_BUTTON3,      10E  JOYCODE_8_BUTTON5,
+                        85   JOYCODE_2_DOWN,         B3   JOYCODE_4_BUTTON2,      E1   JOYCODE_6_BUTTON4,      10F  JOYCODE_8_BUTTON6,
+                        86   JOYCODE_2_BUTTON1,      B4   JOYCODE_4_BUTTON3,      E2   JOYCODE_6_BUTTON5,      110  JOYCODE_8_BUTTON7,
+                        87   JOYCODE_2_BUTTON2,      B5   JOYCODE_4_BUTTON4,      E3   JOYCODE_6_BUTTON6,      111  JOYCODE_8_BUTTON8,
+                        88   JOYCODE_2_BUTTON3,      B6   JOYCODE_4_BUTTON5,      E4   JOYCODE_6_BUTTON7,      112  JOYCODE_8_BUTTON9,
+                        89   JOYCODE_2_BUTTON4,      B7   JOYCODE_4_BUTTON6,      E5   JOYCODE_6_BUTTON8,      113  JOYCODE_8_BUTTON10,
+                        8A   JOYCODE_2_BUTTON5,      B8   JOYCODE_4_BUTTON7,      E6   JOYCODE_6_BUTTON9,      114  JOYCODE_8_BUTTON11,
+                        8B   JOYCODE_2_BUTTON6,      B9   JOYCODE_4_BUTTON8,      E7   JOYCODE_6_BUTTON10,     115  JOYCODE_8_BUTTON12,
+                        8C   JOYCODE_2_BUTTON7,      BA   JOYCODE_4_BUTTON9,      E8   JOYCODE_6_BUTTON11,     116  JOYCODE_8_BUTTON13,
+                        8D   JOYCODE_2_BUTTON8,      BB   JOYCODE_4_BUTTON10,     E9   JOYCODE_6_BUTTON12,     117  JOYCODE_8_BUTTON14,
+                        8E   JOYCODE_2_BUTTON9,      BC   JOYCODE_4_BUTTON11,     EA   JOYCODE_6_BUTTON13,     118  JOYCODE_8_BUTTON15,
+                        8F   JOYCODE_2_BUTTON10,     BD   JOYCODE_4_BUTTON12,     EB   JOYCODE_6_BUTTON14,     119  JOYCODE_8_BUTTON16,
+                        90   JOYCODE_2_BUTTON11,     BE   JOYCODE_4_BUTTON13,     EC   JOYCODE_6_BUTTON15,     11A  JOYCODE_8_START,
+                        91   JOYCODE_2_BUTTON12,     BF   JOYCODE_4_BUTTON14,     ED   JOYCODE_6_BUTTON16,     11B  JOYCODE_8_SELECT,
+                        92   JOYCODE_2_BUTTON13,     C0   JOYCODE_4_BUTTON15,     EE   JOYCODE_6_START,
+                        93   JOYCODE_2_BUTTON14,     C1   JOYCODE_4_BUTTON16,     EF   JOYCODE_6_SELECT,
+                        94   JOYCODE_2_BUTTON15,     C2   JOYCODE_4_START,        F0   JOYCODE_7_LEFT,
+                        95   JOYCODE_2_BUTTON16,     C3   JOYCODE_4_SELECT,       F1   JOYCODE_7_RIGHT,
+                        96   JOYCODE_2_START,        C4   JOYCODE_5_LEFT,         F2   JOYCODE_7_UP,
+                        97   JOYCODE_2_SELECT,       C5   JOYCODE_5_RIGHT,        F3   JOYCODE_7_DOWN,
+                        98   JOYCODE_3_LEFT,         C6   JOYCODE_5_UP,           F4   JOYCODE_7_BUTTON1,
+                        99   JOYCODE_3_RIGHT,        C7   JOYCODE_5_DOWN,         F5   JOYCODE_7_BUTTON2,
+
+                        /* digital mouse codes */
+                        11C  MOUSECODE_1_BUTTON1,     128  MOUSECODE_3_BUTTON1,     134  MOUSECODE_5_BUTTON1,     140  MOUSECODE_7_BUTTON1,
+                        11D  MOUSECODE_1_BUTTON2,     129  MOUSECODE_3_BUTTON2,     135  MOUSECODE_5_BUTTON2,     141  MOUSECODE_7_BUTTON2,
+                        11E  MOUSECODE_1_BUTTON3,     12A  MOUSECODE_3_BUTTON3,     136  MOUSECODE_5_BUTTON3,     142  MOUSECODE_7_BUTTON3,
+                        11F  MOUSECODE_1_BUTTON4,     12B  MOUSECODE_3_BUTTON4,     137  MOUSECODE_5_BUTTON4,     143  MOUSECODE_7_BUTTON4,
+                        120  MOUSECODE_1_BUTTON5,     12C  MOUSECODE_3_BUTTON5,     138  MOUSECODE_5_BUTTON5,     144  MOUSECODE_7_BUTTON5,
+                        121  MOUSECODE_1_BUTTON6,     12D  MOUSECODE_3_BUTTON6,     139  MOUSECODE_5_BUTTON6,     145  MOUSECODE_7_BUTTON6,
+                        122  MOUSECODE_2_BUTTON1,     12E  MOUSECODE_4_BUTTON1,     13A  MOUSECODE_6_BUTTON1,     146  MOUSECODE_8_BUTTON1,
+                        123  MOUSECODE_2_BUTTON2,     12F  MOUSECODE_4_BUTTON2,     13B  MOUSECODE_6_BUTTON2,     147  MOUSECODE_8_BUTTON2,
+                        124  MOUSECODE_2_BUTTON3,     130  MOUSECODE_4_BUTTON3,     13C  MOUSECODE_6_BUTTON3,     148  MOUSECODE_8_BUTTON3,
+                        125  MOUSECODE_2_BUTTON4,     131  MOUSECODE_4_BUTTON4,     13D  MOUSECODE_6_BUTTON4,     149  MOUSECODE_8_BUTTON4,
+                        126  MOUSECODE_2_BUTTON5,     132  MOUSECODE_4_BUTTON5,     13E  MOUSECODE_6_BUTTON5,     14A  MOUSECODE_8_BUTTON5,
+                        127  MOUSECODE_2_BUTTON6,     133  MOUSECODE_4_BUTTON6,     13F  MOUSECODE_6_BUTTON6,     14B  MOUSECODE_8_BUTTON6,
+
+                        /* analog codes of all sorts */
+                        14C  JOYCODE_1_ANALOG_X,          164  JOYCODE_5_ANALOG_X,          17C  GUNCODE_1_ANALOG_X,       194  MOUSECODE_3_ANALOG_Z,
+                        14D  JOYCODE_1_ANALOG_Y,          165  JOYCODE_5_ANALOG_Y,          17D  GUNCODE_1_ANALOG_Y,       195  MOUSECODE_4_ANALOG_X,
+                        14E  JOYCODE_1_ANALOG_Z,          166  JOYCODE_5_ANALOG_Z,          17E  GUNCODE_2_ANALOG_X,       196  MOUSECODE_4_ANALOG_Y,
+                        14F  JOYCODE_1_ANALOG_PEDAL1,     167  JOYCODE_5_ANALOG_PEDAL1,     17F  GUNCODE_2_ANALOG_Y,       197  MOUSECODE_4_ANALOG_Z,
+                        150  JOYCODE_1_ANALOG_PEDAL2,     168  JOYCODE_5_ANALOG_PEDAL2,     180  GUNCODE_3_ANALOG_X,       198  MOUSECODE_5_ANALOG_X,
+                        151  JOYCODE_1_ANALOG_PEDAL3,     169  JOYCODE_5_ANALOG_PEDAL3,     181  GUNCODE_3_ANALOG_Y,       199  MOUSECODE_5_ANALOG_Y,
+                        152  JOYCODE_2_ANALOG_X,          16A  JOYCODE_6_ANALOG_X,          182  GUNCODE_4_ANALOG_X,       19A  MOUSECODE_5_ANALOG_Z,
+                        153  JOYCODE_2_ANALOG_Y,          16B  JOYCODE_6_ANALOG_Y,          183  GUNCODE_4_ANALOG_Y,       19B  MOUSECODE_6_ANALOG_X,
+                        154  JOYCODE_2_ANALOG_Z,          16C  JOYCODE_6_ANALOG_Z,          184  GUNCODE_5_ANALOG_X,       19C  MOUSECODE_6_ANALOG_Y,
+                        155  JOYCODE_2_ANALOG_PEDAL1,     16D  JOYCODE_6_ANALOG_PEDAL1,     185  GUNCODE_5_ANALOG_Y,       19D  MOUSECODE_6_ANALOG_Z,
+                        156  JOYCODE_2_ANALOG_PEDAL2,     16E  JOYCODE_6_ANALOG_PEDAL2,     186  GUNCODE_6_ANALOG_X,       19E  MOUSECODE_7_ANALOG_X,
+                        157  JOYCODE_2_ANALOG_PEDAL3,     16F  JOYCODE_6_ANALOG_PEDAL3,     187  GUNCODE_6_ANALOG_Y,       19F  MOUSECODE_7_ANALOG_Y,
+                        158  JOYCODE_3_ANALOG_X,          170  JOYCODE_7_ANALOG_X,          188  GUNCODE_7_ANALOG_X,       1A0  MOUSECODE_7_ANALOG_Z,
+                        159  JOYCODE_3_ANALOG_Y,          171  JOYCODE_7_ANALOG_Y,          189  GUNCODE_7_ANALOG_Y,       1A1  MOUSECODE_8_ANALOG_X,
+                        15A  JOYCODE_3_ANALOG_Z,          172  JOYCODE_7_ANALOG_Z,          18A  GUNCODE_8_ANALOG_X,       1A2  MOUSECODE_8_ANALOG_Y,
+                        15B  JOYCODE_3_ANALOG_PEDAL1,     173  JOYCODE_7_ANALOG_PEDAL1,     18B  GUNCODE_8_ANALOG_Y,       1A3  MOUSECODE_8_ANALOG_Z,
+                        15C  JOYCODE_3_ANALOG_PEDAL2,     174  JOYCODE_7_ANALOG_PEDAL2,     18C  MOUSECODE_1_ANALOG_X,
+                        15D  JOYCODE_3_ANALOG_PEDAL3,     175  JOYCODE_7_ANALOG_PEDAL3,     18D  MOUSECODE_1_ANALOG_Y,
+                        15E  JOYCODE_4_ANALOG_X,          176  JOYCODE_8_ANALOG_X,          18E  MOUSECODE_1_ANALOG_Z,
+                        15F  JOYCODE_4_ANALOG_Y,          177  JOYCODE_8_ANALOG_Y,          18F  MOUSECODE_2_ANALOG_X,
+                        160  JOYCODE_4_ANALOG_Z,          178  JOYCODE_8_ANALOG_Z,          190  MOUSECODE_2_ANALOG_Y,
+                        161  JOYCODE_4_ANALOG_PEDAL1,     179  JOYCODE_8_ANALOG_PEDAL1,     191  MOUSECODE_2_ANALOG_Z,
+                        162  JOYCODE_4_ANALOG_PEDAL2,     17A  JOYCODE_8_ANALOG_PEDAL2,     192  MOUSECODE_3_ANALOG_X,
+                        163  JOYCODE_4_ANALOG_PEDAL3,     17B  JOYCODE_8_ANALOG_PEDAL3,     193  MOUSECODE_3_ANALOG_Y,
+
+Overclock: (01100101 -------- -1------ --------) 0x65004000
+
+                      Overclocks a CPU. Put the CPU index you want in the
+                      address field, and the overclocking amount in the data
+                      field. Use 16.16 fixed point notation for the
+                      overclocking amount.
+
+                      Example 1: overclocking CPU #0 by 200%
+                      :gamename:65004000:00000000:00020000:00000000:
+
+                      Example 2: overclocking CPU #3 by 125%
+                      :gamename:65004000:00000003:00014000:00000000:
+
+                      To convert a percent to 16.16 fixed point notation, take
+                      the percentage as a decimal value (eg. 65% = .65) and
+                      multiply it by 65536. Then, convert the value to hex.
+
+
+Watches:
+--------
+
+You can specify options for watches using the data field. Specify fields like
+this:
+
+MSB                             LSB
+33222222 22221111 11111100 00000000
+10987654 32109876 54321098 76543210
+-------- -------- -------- xxxxxxxx number of elements - 1
+-------- -------- xxxxxxxx -------- bytes to skip after each element
+-------- xxxxxxxx -------- -------- elements per line
+                                    0 = all on one line
+xxxxxxxx -------- -------- -------- signed value to add
+
+So, to make a watch on CPU1 address 0064407F with six elements, skipping three
+bytes after each element, showing two elements per line, you would do this:
+
+:gamename:00000006:0064407F:00020305:00000000:
+
+Notes:
+
+- if you want to have a list of many on/off sub-cheats, include a "None" option,
+  or there will be no way to disable the cheat
+- the engine will display "Press Enter to Activate Cheat" if a one-shot cheat
+  is selected
+
+
+------------------------------------------------------------------------------
+              SECTION 6     How to Pre-Enable cheats
+------------------------------------------------------------------------------
+
+Pre-Enable: (01100100 -------- -1------ --------) 0x64004000
+
+Enables a cheat on startup. Put the index of the cheat you want to enable in
+the address field.
+
+Example, to activate the eleventh cheat in the cheat list, add this cheat to
+the file:
+
+:gamename:64004000:0000000A:00000000:00000000:
+
+Actual Example:
+For the game Marble Madness, add this to the end of your cheat file it must be
+the end of the cheat file or it won't work!
+
+:marble:64004000:00000004:00000000:00000000:
+:marble:64004000:00000007:00000000:00000000:
+
+If you've done it correctly the above two lines will automatically enable
+cheat lines 5 and 8 for that game which at the time of writing will give
+Infinite Time for both players.
+
+NOTE: The cheat lines are counted in hexadecimal not in decimal and the first
+      cheat line is 0, the 9th is 08, 11th is 0A etc. You should ignore all
+      other cheats in a linked list or linked cheat other than the first cheat.
+      All other cheats including comment cheats should be counted though
+
+
+The pre-enabled cheats should be placed in the Pre-Enabled Cheat Section near the 
+end of the cheat.dat file. Below is a semi-full list of example pre-enabling cheats
+for the game with the shortname "gamename". 
+
+Just remember if you're pre-enabling cheats that you will need to copy any
+pre-enabling cheats you have made to future cheat files, if you just copy over
+the new cheat.dat file you will lose any pre-enabling cheats you have made.
+Also bear in mind that the cheat order in the cheat file can be changed between
+updates due to new cheats being added, buggy cheats being removed or the cheats
+just being re-arranged. Of course if the mamedevs change the shortname you will
+have to compensate for that too. All things considered unless you know what you
+are doing just stick to enabling cheats manually when you play the game.
+
+REMEMBER THOUGH IF YOU PRE-ENABLE CHEATS FOR SOME GAMES IT WILL CAUSE THE GAME
+TO FAIL IT'S RAM/ROM CHECKING AND THE GAME MAY NOT START. IN THESE CASES CHECK
+TO SEE IF THERE ARE ANY CHEATS TO BYPASS THESE CHECKS AND IF THERE ARE THEN
+PRE-ENABLE THOSE CHEATS. OTHERWISE YOU CAN TEMPORARILY TURN OFF ALL CHEATS
+USING F6, RESET THE GAME AND THEN PRESS F6 AGAIN TO TURN ON ALL YOUR
+PRE-ENABLED CHEATS.
+
+:gamename:64004000:000000:00000000:00000000:Pre-Enable the 001st cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000001:00000000:00000000:Pre-Enable the 002nd cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000002:00000000:00000000:Pre-Enable the 003rd cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000003:00000000:00000000:Pre-Enable the 004th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000004:00000000:00000000:Pre-Enable the 005th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000005:00000000:00000000:Pre-Enable the 006th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000006:00000000:00000000:Pre-Enable the 007th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000007:00000000:00000000:Pre-Enable the 008th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000008:00000000:00000000:Pre-Enable the 009th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000009:00000000:00000000:Pre-Enable the 010th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:00000A:00000000:00000000:Pre-Enable the 011th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:00000B:00000000:00000000:Pre-Enable the 012th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:00000C:00000000:00000000:Pre-Enable the 013th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:00000D:00000000:00000000:Pre-Enable the 014th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:00000E:00000000:00000000:Pre-Enable the 015th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:00000F:00000000:00000000:Pre-Enable the 016th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000010:00000000:00000000:Pre-Enable the 017th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000011:00000000:00000000:Pre-Enable the 018th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000012:00000000:00000000:Pre-Enable the 019th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000013:00000000:00000000:Pre-Enable the 020th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000014:00000000:00000000:Pre-Enable the 021st cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000015:00000000:00000000:Pre-Enable the 022nd cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000016:00000000:00000000:Pre-Enable the 023rd cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000017:00000000:00000000:Pre-Enable the 024th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000018:00000000:00000000:Pre-Enable the 025th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000019:00000000:00000000:Pre-Enable the 026th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:00001A:00000000:00000000:Pre-Enable the 027th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:00001B:00000000:00000000:Pre-Enable the 028th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:00001C:00000000:00000000:Pre-Enable the 029th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:00001D:00000000:00000000:Pre-Enable the 030th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:00001E:00000000:00000000:Pre-Enable the 031st cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:00001F:00000000:00000000:Pre-Enable the 032nd cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000020:00000000:00000000:Pre-Enable the 033rd cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000021:00000000:00000000:Pre-Enable the 034th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000022:00000000:00000000:Pre-Enable the 035th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000023:00000000:00000000:Pre-Enable the 036th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000024:00000000:00000000:Pre-Enable the 037th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000025:00000000:00000000:Pre-Enable the 038th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+:gamename:64004000:000026:00000000:00000000:Pre-Enable the 039th cheat in the list:Do NOT count linked cheats or cheats in a linked list!!
+
+
+Copy and paste which cheats above you need and change the gamename accordingly,
+it might be an idea to change the comment so that you know what's being
+pre-enabled though. Note if you want to pre-enable your own cheats not in this
+cheat file you must make sure that the pre-enabling cheats are AFTER your own
+cheats!
+
+ Example for Marble Madness:-
+:marble:64004000:000004:00000000:00000000:Pre-Enable the 005th cheat in the list:Pre-enabled Infinite Time PL1
+:marble:64004000:000007:00000000:00000000:Pre-Enable the 008th cheat in the list:Pre-enabled Infinite Time PL2
+
+
+------------------------------------------------------------------------------
+                   SECTION 7     Dynamic Cheat Finding method
+------------------------------------------------------------------------------
+
+Dynamic Cheat Finding method by Pugsy
+-------------------------------------
+
+From the start, this is presuming you are using a debug MAME. I'm using samsho2
+as an example and I am looking for infinite energy for PL1 - the method is easy
+to alter for different games and/or other things (this is mainly a method used
+for neogeo games - the only real system that utilises dynamic addressing for
+'useful' locations). It's not a method for beginners, it assumes cheat finding
+skills, a basic understanding of hexadecimal addressing and an ability to
+decode my waffling.
+
+
+
+1. Start MAME as you would normally - don't forget you must use the debug MAME
+   build with either -debug on the command-line or DEBUG 1 in the ini file.
+
+2. You will find that after a short while MAME will be on the debugger screen,
+   at this stage just press F12 to start the game. [REMEMBER F12 in the
+   debugger will return you to the game]
+
+3. Commence play
+
+4. Start a Energy Search and reduce the results using standard methods. In the
+   example I reduced the results to 2 possibles 100AC6 & 10373B, by using
+   watches I can discount 100AC6 as it's the time location. So that leaves us
+   with 10373B 80 = Full Energy. NOTE: You have to find the value as quickly as
+   possible because the location will change the next time the level changes,
+   so you would have to start the search from the beginning. You can test the
+   address you find by poking it directly if it's the correct location you will
+   find it will have the desired affect on that level.
+
+5. Press the tilde key (the tilde key is the key under Esc and about TAB and
+   the the left of 1). You will now be in the debugger, remember the fact that
+   we found the address 0010373B in step 4 (Note the preceding 0s - we will
+   need them).
+
+6. Press TAB 3 times so that the cursor is in the address window. Now press S
+   to commence a search and type in the value as per step 5...but drop the last
+   byte as that will be part of the index. So in this case we would type in 00
+   10 37, then press RETURN to execute the search - you can repeat the search
+   by  pressing S and hitting RETURN (the last search values are still set).
+   For every search result note down the address, you can safely ignore any
+   results in ROM locations or where it crosses word boundaries (ie. it shows as
+   XX00 1037 instead of 0010 37XX). In this example you will find that
+   S 00 10 37  only returns one ROM location at 00003680, so we can safely
+   ignore it. However, there are no other occurrences so we are goosed.....or
+   are we?
+
+7. If there are no possibilities then remember that the location we are looking
+   for contains an address that hopefully points to a page of memory limited in
+   size. In most cases this seems to be no greater than 256 bytes and is mostly
+   forward indexed (+ve rather than -ve). So assuming that 10373B is the
+   extreme case it is 256 bytes away from the start of the memory page base
+   location, then the base location of the page would be 10363C. So we need to
+   repeat Step 6 but this time with S 00 10 36 as the search instruction,
+   ignoring ROM locations and word boundary crossing, from this we get the
+   following results:-
+
+   Address     Contents
+   100A46       00103680
+   100A5E       00103680
+   102AEC       00103680
+   102D2C       00103680
+   103F2C       00103680
+   10404C       00103680
+   104DCC       00103680
+   10500C       00103680
+   1057EC       00103680
+   105A2C       00103680
+   105C6C       00103680
+   10644C       00103680
+
+8. From the Step 7 results you can see that all the results point to a page of
+   memory starting at 00103680, since we know the energy location is 0010373B
+   we can work out that the index value is = BB (Cheat Location - Start Address
+   of page = 10373B -103680).
+
+9. Now you need to narrow the location down either by loads of watches on
+   several levels or by excessive testing, personally I place a watch on all
+   the locations and try the first location first, second location second etc
+   etc. [ NOTE: A lot of neogeo games which utilise dynamic addressing seem to
+   like to use a value in the range 100AXX as the pointer location. ] Here are
+   the cheats to try first...
+
+   :samsho2:83000000:00100A46:00000080:000000BB:Infinite Energy PL1 [POSSIBILITY NO. 1]
+   :samsho2:83000000:00100A5E:00000080:000000BB:Infinite Energy PL1 [POSSIBILITY NO. 2]
+   :samsho2:83000000:00102AEC:00000080:000000BB:Infinite Energy PL1 [POSSIBILITY NO. 3]
+   :samsho2:83000000:00102D2C:00000080:000000BB:Infinite Energy PL1 [POSSIBILITY NO. 4]
+
+   { One more interesting thing to note, you may find that several locations
+     will have the desired affect as the pointers maybe held in several places
+     in memory, it really doesn't matter which one you use. }
+
+10. Once you find out the location which works bear in mind that the game will
+    use the same page for other things like Power etc, Note PL2 will generally
+    use a different page though the location holding the pointer is generally
+    right next to the pointer for the other Player (the index will generally be
+    the same though...which is nice :) ).
+
+For samsho2 we hence have these dynamic cheats:-
+
+:samsho2:83000000:00100A46:00000080:000000BB:Infinite Energy PL1
+:samsho2:83000001:00100A46:00000000:000000BB:Drain All Energy Now! PL1
+:samsho2:83000000:00100A46:00000020:000000F0:Always have Maximum Power PL1
+:samsho2:83000000:00100A46:00000000:000000F0:Always have Minimum Power PL1
+:samsho2:83000000:00100A4A:00000080:000000BB:Infinite Energy PL2
+:samsho2:83000001:00100A4A:00000000:000000BB:Drain All Energy Now! PL2
+:samsho2:83000000:00100A4A:00000020:000000F0:Always have Maximum Power PL2
+:samsho2:83000000:00100A4A:00000000:000000F0:Always have Minimum Power PL2
+
+Dynamic Cheat Finding Method (c) Pugsy 2000-2002
+
+
+
+------------------------------------------------------------------------------
+                      SECTION 8     General Credits
+------------------------------------------------------------------------------
+
+The following people have contributed cheats to this cheat file since it's
+first release in early 1998. By contributing I mean they have either emailed
+me the cheats or have posted cheats on the cheat forums or have even just
+pointed out errors with the cheat file. The names are sorted alphabetically
+by first name, I prefer real names but aliases are included:
+
+Andresb,
+Angel L. Fradejas,
+asper,
+aycaramba,
+Ben Jos Walbeehm,
+C-TYPE,
+Cal,
+Chris Aruffo,
+Chris Henry,
+Chuck Livingston,
+Coyotepaw,
+CyberTaco,
+Daniel Clegg,
+Daniel Donoghue,
+Darkfantager,
+Dave Haywood (Haze),
+David Jumper,
+Deb,
+Deckrine,
+Don Hodges (PhantomDJ),
+Doug Works,
+drivium,
+Dude,
+Eli Flores,
+EmuZoneAD,
+enaitzjga,
+Eric King,
+F. D. Vorck,
+Federico Stein,
+Felipe de Almeida Leme,
+FerJoe,
+Filipe de V. Estima (aka Bugfinder),
+Franck Charron,
+Freegamer,
+From A Distance,
+Gmitra,
+Heihachi_73,
+Heiko Herold (aka Hman),
+Iain Odlin,
+Ian Patterson (the programmer of the new MAME Cheat Engine - what a great job he made of it too),
+Jaguar,
+James Henstridge,
+Jamie,
+jAsOn,
+JCK of the Ultimate Patchers (lots and lots....possible alter-ego of Steph),
+jdurgi, 
+Jeff Gerstmann (aka Gleemonex),
+Joe Ho,
+John Sensebe,
+Jon Attree,
+Jon Colverson,
+Jos' Miguel Aunin Juan,
+Joseph Rard,
+Jym,
+kelvSYC (he likes his fighters far too much to be healthy! ;-P ),
+Ken Lui,
+Kenshiroh,
+Kevin Butler,
+Kim Scarborough,
+KiwI_SLT,
+Kralicek,
+Kranser,
+Laurence Pittenger,
+Leo,
+Lloyd Hannesson,
+Lone Soldier,
+Luca G. Nieddu,
+Luigi,
+Lurendrejer,
+M.A.S.H. (Multiple Arcade Special Helper) alias Xgebken,
+M'Lord Sandwich,
+Mac Lak (neogeo cheats and author of the defunct CheckCDB cheat checker),
+Marc Lafontaine (the programmer of the original MAME cheat engine)
+Marc Sira,
+Marceau Mallard,
+Marcovich,
+Martin Fernandez,
+Martin Pugh ( aka Pugsy, you wouldn't believe how MANY cheats this bloke has found!!! - oh that's me! ;-) ),
+Maurizio Zanello,
+Michael Horton (alias Just Michael),
+Michel Colman,
+Mike Haggar (he of the FinalBurn & Nebula cheat files)
+mike myers,
+Mohsin, 
+MRMIdAS,
+Nate,
+Nathan Duran,
+Nathaniel Fedewa,
+Neorage,
+nyc7398,
+Pablo Fernandez (AKA Darksoft),
+PAC-MAD/Doctor Flip of the Ultimate Patchers,
+Paul Priest (aka Tourniquet),
+Paul Slabowski,
+Paulo Cordeiro,
+Pon,
+Radiohead,
+Red,
+RedBeam,
+Riaan Prinsloo,
+Robert J Baker,
+Robert MacCarthy (aka Crashtest),
+Rodney Norton (aka Slade - the author of the Cheat Database Checker, the replacement for checkcdb),
+RON024,
+Santeri Saarimaa,
+ShimaPong aka 'The Destroyer of the cheat.dat Cheat Engine',
+Shun,
+Sgt Capcom,
+Southpaw,
+SSJVegeta (aka  Eiji),
+Steph Humbert of the Ultimate Patchers (lots and lots),
+Sum,
+T L Hawkins,
+Taucher0815,
+Techno_Vamp,
+Tetrisguy,
+The Gizmo,
+The Rabbit,
+The StarCreator,
+The tECHIDNA,
+Thierry Jaboeuf,
+Thorwak,
+Tom,
+Tyler Weems,
+Udirnel,
+Valentino Georgiou,
+VisitntX,
+Voodoo666,
+Walk,
+walterh78,
+Wayder,
+Whipon, 
+Who Wants to Know?,
+WhosAsking,
+Xavier,
+Yip Ho Fan,
+YMI,
+Yuuki-chan,
+Zakriya Aleem (aka zakria),
+Zan Hsieh,
+Zanic.
+
+If I've missed anybody out or if you are included twice (real name and alias)
+then please let me know. You could even send some cheats along with the info,
+I haven't heard from some of you for ages!!!
+
+------------------------------------------------------------------------------
+             SECTION 9     Games utilising ROM cheats with credits
+------------------------------------------------------------------------------
+
+Games utilising ROM cheats, where the cheat actually changes the program code
+rather than the game data. Individual credits will be given due to the extra
+work and skill - though only for cheats where RAM cheats are either not
+possible or buggy! Sometimes it is actually a LOT quicker to make a ROM hack
+than find a RAM cheat.
+
+I'm keeping this list as I may find it useful to for testing purposes when the
+cheat engine changes...especially for processors with endian (big and little)
+issues. As new clones are added I will add the cheats and give credit to the
+original author for the clones as long as the conversions are relatively
+straightforward.
+
+005 (made by ShimaPong) [Z80]
+1943 (made by ShimaPong) [Z80]
+1943j (made by ShimaPong) [Z80]
+1943kai (made by ShimaPong) [Z80]
+2020bb (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+2020bba (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+2020bbh (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+280zzzap (made by ShimaPong) [8080]
+3countb (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+3wonders (made by RedBeam) [68000]
+3wonderu (made by RedBeam) [68000]
+4dwarrio (made by ShimaPong) [Z80]
+4in1 (made by Pugsy/ShimaPong (Invincibility) & ugetab (Speed Hack)) [Z80]
+600 (made by ShimaPong) [Z80]
+800fath (made by Pugsy) [Z80]
+99lstwar (made by Shimapong) [Z80]
+99lstwra (made by Shimapong) [Z80]
+99lstwrk (made by Shimapong) [Z80]
+abattle (made by ShimaPong) [M6502]
+abattle2 (made by ShimaPong) [M6502]
+abscam (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+acombat (made by ShimaPong) [M6502]
+acombato (made by ShimaPong) [M6502]
+acrobatm (made by ShimaPong) [68000]
+ad2083 (made by ShimaPong) [Z80]
+aeroboto (made by ShimaPong) [M6809]
+afire (made by ShimaPong) [M6502]
+airwolf (made by ShimaPong) [Z80]
+airwolfa (made by ShimaPong) [Z80]
+ajax (made by ShimaPong) [KONAMI]
+ajaxj (made by ShimaPong) [KONAMI]
+akkanvdr (made by Tourniquet(Region Code)) [68EC020]
+aladbl (made by Pugsy) [68000]
+alcon (made by ShimaPong) [Z80]
+alibaba (made by ShimaPong) [Z80]
+alien3 (made by ShimaPong) [V60]
+alien3u (made by ShimaPong) [V60]
+alieninv (made by Pugsy) [8080]
+aliensec (made by ShimaPong) [M6809]
+alpha1v (made by Pugsy) [Z80]    
+alphaho (made by Pugsy) [Z80]
+alpham2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+alphamis (made by ShimaPong) [Z80]
+altair (made by Pugsy) [CDP1802]
+amatelas (updated by ShimaPong) [68000]
+amazon (updated by ShimaPong) [68000]
+ambush (made by ShimaPong) [Z80]
+ambusht (made by ShimaPong) [Z80]
+ambushv (made by ShimaPong) [Z80]
+androdun (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+androdun (made by ShimaPong) [68000]
+angelkds (made by ShimaPong) [Z80]
+aodk (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+aof (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+aof2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+aof2 (made by ShimaPong) [68000]
+aof2a (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+aof2a (made by ShimaPong) [68000]
+aof3 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+aof3k (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ar_sdwr (made by ShimaPong) [68000]
+ar_xeon (made by ShimaPong) [68000]
+arabiamj (made by Tourniquet(Region Code)) [68EC020]
+arabiamu (made by Tourniquet(Region Code)) [68EC020]
+arabian (made by ShimaPong) [Z80]
+arabiana (made by ShimaPong) [Z80]
+arabianm (made by Tourniquet(Region Code)) [68EC020]
+arcadia (made by Pugsy) [M6809]
+argus (made by ShimaPong) [Z80]
+arian (made by ShimaPong) [Z80]
+arkretrn (made by Tourniquet(Region Code)) [68EC020]
+armedf (made by ShimaPong) [68000]
+armora (made by Pugsy) [CCPU]
+armorap (made by Pugsy) [CCPU]
+armorar (made by Pugsy) [CCPU]
+armorca2 (made by ShimaPong) [Z80]
+armorcar (made by ShimaPong) [Z80]
+aso (made by ShimaPong) [Z80]
+assault (made by ShimaPong) [68000]
+assaultj (made by ShimaPong) [68000]
+assaultp (made by ShimaPong) [68000]
+astdelu1 (made by Pugsy) [M6502]
+astdelu2 (made by Pugsy) [M6502]
+astdelux (made by Pugsy) [M6502]
+asterix (made by ShimaPong) [68000]
+asterock (made by Pugsy) [M6502]
+asteroi1 (made by Pugsy) [M6502]
+asteroib (made by Pugsy) [M6502]
+asteroid (made by Pugsy) [M6502]
+astrob (updated/fixed by ShimaPong) [Z80]
+astrob1 (updated/fixed by ShimaPong) [Z80]
+astrob2 (updated/fixed by ShimaPong) [Z80]
+astrob2a (updated/fixed by ShimaPong) [Z80]
+astrof (made by ShimaPong) [M6502]
+astrof2 (made by ShimaPong) [M6502]
+astrof3 (made by ShimaPong) [M6502]
+astrofl (made by ShimaPong) [Z80]
+astrxeaa (made by ShimaPong) [68000]
+astrxeac (made by ShimaPong) [68000]
+athena (made by ShimaPong) [Z80]
+atlantis (made by ShimaPong) [Z80]
+atlants2 (made by ShimaPong) [Z80]
+atomboy (made by Pugsy) [Z80]
+atomboya (made by Pugsy) [Z80]
+aurail (made by ShimaPong) [68000]
+aurail1 (made by ShimaPong) [68000]
+aurailj (made by ShimaPong) [68000]
+azurian (updated/fixed by ShimaPong) [Z80]
+bakatono (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ballbomb (made by ShimaPong) [8080]
+baluba (made by ShimaPong) [Z80]
+bangbead (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+bankp (made by ShimaPong) [Z80]
+baraduke (made by ShimaPong) [M6809]
+barricad (made by Pugsy) [I8080]
+barrier (made by Pugsy) [CCPU]
+batman2 (made by Pugsy) [Z80]
+battlan2 (made by Pugsy) [M6809]
+battlan3 (made by Pugsy) [M6809]
+battlane (made by Pugsy) [M6809]
+battles (made by ShimaPong) [Z80]
+battlex (updated/fixed by ShimaPong) [Z80]
+battlntj (made by ShimaPong) [HD6309]
+battlnts (made by ShimaPong) [HD6309]
+bbbxing (made by RedBeam) [V70]
+bchopper (made by ShimaPong) [V30]
+bcruzm12 (made by ShimaPong) [Z80]
+beaminv (made by ShimaPong) [Z80]
+beaminva (made by ShimaPong) [Z80]
+beastf (made by ShimaPong) [Z80]
+berzerk (made by ShimaPong) [Z80]
+berzerk1 (made by ShimaPong) [Z80]
+bigkong (made by aycaramba {Invincibility/level} & PhantomDJ {Kill Screen Fix}) [Z80]
+bioatack (made by ShimaPong) [Z80]
+biomtoy (made by Pugsy) [68000]
+bionicc (made by ShimaPong) [68000]
+bionicc1 (made by ShimaPong) [68000]
+bionicc2 (made by ShimaPong) [68000]
+bjourney (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+blastoff (made by ShimaPong) [M6809]
+blazlaz (made by Pugsy) [HuC6280]
+blazstar (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+blckgalb (made by ShimaPong) [Z80]
+blckout2 (made by RedBeam) [68000]
+blckoutj (made by RedBeam) [68000]
+blitz (made by Pugsy) [R5000]
+blitz11 (made by Pugsy) [R5000]
+blitz2k (made by Pugsy) [R5000]
+blitz99 (made by Pugsy) [R5000]
+blkbustr (made by ShimaPong) [Z80]
+blkhole (made by ugetab) [Z80]
+blockcar (made by RedBeam) [68000]
+blockgal (made by ShimaPong) [Z80]
+blockout (made by RedBeam) [68000]
+blueprnj (made by ShimaPong) [Z80]
+blueprnt (made by ShimaPong) [Z80]
+bnj (made by ShimaPong) [M6502]
+boggy84 (made by ShimaPong) [Z80]
+bombsa (made by ShimaPong) [Z80]
+bonzeado (made by Pugsy) [68000]
+bonzeadu (made by Pugsy) [68000]
+bonzeadv (made by Pugsy) [68000]
+boomrana (made by Pugsy) [DECO CPU16]
+boomrang (made by Pugsy) [DECO CPU16]
+bosco (made by Pugsy) [Z80]
+boscomd (made by Pugsy) [Z80]
+boscomdo (made by Pugsy) [Z80]
+boscoo (made by Pugsy) [Z80]
+boscoo2 (made by Pugsy) [Z80]
+botanic (made by ShimaPong) [Z80]
+bounty (made by ShimaPong) [Z80]
+boxingb (made by Pugsy) [CCPU]
+brain (made by ShimaPong) [Z80]
+brdrlinb (made by ShimaPong) [Z80]
+brdrline (made by ShimaPong) [Z80]
+brdrlins (made by ShimaPong) [Z80]
+breakers (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+breakrev (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+brickyrd (made by Pugsy) [I8080]
+brkthru (made by ShimaPong) [M6809]
+brkthruj (made by ShimaPong) [M6809]
+brubber (made by ShimaPong) [M6502]
+bstars (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+bstars2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+btime (originally made by Pugsy/replaced with Music Fixed ones made by Shimapong) [M6502]
+btime2 (originally made by Pugsy/replaced with Music Fixed ones made by Shimapong) [M6502]
+btimem (originally made by Pugsy/replaced with Music Fixed ones made by Shimapong) [M6502]
+btlecity (made by ShimaPong) [N2A03]
+bubblem (made by Tourniquet(Region Code)) [68EC020]
+bubblemj (made by Tourniquet(Region Code)) [68EC020]
+bubbobl2 (made by ShimaPong) [68EC020]
+bublbob2 (made by Tourniquet(Region Code)) [68EC020]
+bubsympe (made by ShimaPong) [68EC020]
+bubsymph (made by ShimaPong) [68EC020]
+bubsympu (made by ShimaPong) [68EC020]
+buckrog (made by ShimaPong) [Z80]
+buckrogn (made by ShimaPong) [Z80]
+buggybjr (made by Pugsy) [8086]
+burningf (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+burningh (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+bwidow (made by Pugsy) [M6502]
+bwings (made by ShimaPong) [M6809]
+bwingsa (made by ShimaPong) [M6809]
+bwingso (made by ShimaPong) [M6809]
+cabal (made by ShimaPong) [68000]
+cabala (made by ShimaPong) [68000]
+cabalbl (made by ShimaPong) [68000]
+cabalus (made by ShimaPong) [68000]
+cabalus2 (made by ShimaPong) [68000]
+calibr50 (made by Pugsy) [68000]
+calorie (made by Pugsy) [Z80]
+calorieb (made by Pugsy) [Z80]
+canvas (made by ShimaPong) [Z80]
+capitol (made by Pugsy) [8085A]
+caractn (made by ShimaPong) [M6502]
+castfant (made by ShimaPong) [M6502]
+caterplr (made by Pugsy) [M6502]
+catmousa (made by ShimaPong) [S2650]
+catnmous (made by ShimaPong) [S2650]
+cbaj (made by Pugsy) [PSX CPU]
+cbdash (made by ShimaPong) [M6502]
+cbnj (made by ShimaPong) [M6502]
+cbtime (made by Pugsy) [M6502]
+cburnrb2 (made by ShimaPong) [M6502]
+cburnrub (made by ShimaPong) [M6502]
+ccboot (made by Pugsy) [Z80]
+ccboot2 (made by Pugsy) [Z80]
+cclimber (made by Pugsy) [Z80]
+cclimbrj (made by Pugsy) [Z80]
+centipd2 (made by Pugsy) [M6502]
+centipdb (made by Pugsy) [M6502]
+centiped (made by Pugsy) [M6502]
+centtime (made by Pugsy) [M6502]
+cflyball (made by ShimaPong) [M6502]
+cgraplop (made by ShimaPong) [M6502]
+cgraplp2 (made by ShimaPong) [M6502]
+chaknpop (made by ShimaPong) [Z80]
+challeng (made by Pugsy) [M6502]
+cham24 {03. Mario Bros 2} (made by Pugsy) [N2A03]
+cham24 {05. Legedry (The Legend of Kage)} (made by Pugsy) [N2A03]  [NOT WORKING]
+cham24 {07. Exerion} (made by Pugsy) [N2A03]
+cham24 {08. Front Line} (made by Pugsy) [N2A03]
+cham24 {11. Islander (Wonder Boy)} (made by Pugsy) [N2A03]
+cham24 {12. Nuts & Milk} (made by Pugsy) [N2A03]
+cham24 {13. Pac-man} (based on NES code by megaman_exe) [N2A03]
+cham24 {15. Dig Dug} (made by Pugsy) [N2A03]
+cham24 {16. Pooyan} (made by Pugsy) [N2A03]
+cham24 {17. Twin Bee} (based on NES codes by Whipon) [N2A03]
+cham24 {18. Donkey Kong} (made by Pugsy) [N2A03]
+cham24 {20. Galaxian} (made by Pugsy) [N2A03]
+cham24 {21. Star Force} (made by Pugsy) [N2A03]
+cham24 {22. Xevious} (made by Pugsy) [N2A03]
+cham24 {23. Galaga} (made by Pugsy) [N2A03]
+chameleo (made by Pugsy) [M6502]
+cheesech (made by ShimaPong) [68000]
+chelnov (made by ShimaPong) [68000]
+chelnovj (made by ShimaPong) [68000]
+chelnovu (made by ShimaPong) [68000]
+chinagat (made by ShimaPong) [HD6309]
+chinher2 (made by ShimaPong) [Z80]
+chinhero (made by ShimaPong) [Z80]
+chinhert (made by ShimaPong) [Z80]
+choko (made by Pugsy) [68000]
+chwy (made by ShimaPong) [M6502]
+circusc (made by Pugsy) [M6809]
+circusc2 (made by Pugsy) [M6809]
+circusc3 (made by Pugsy) [M6809]
+circuscc (made by Pugsy) [M6809]
+circusce (made by Pugsy) [M6809]
+citycon (made by Pugsy) [M6809]
+citycona (made by Pugsy) [M6809]
+ckong (made by aycaramba {Invincibility/level} & PhantomDJ {Kill Screen Fix}) [Z80]
+ckonga (made by aycaramba {Invincibility/level} & PhantomDJ {Kill Screen Fix}) [Z80]
+ckongalc (made by aycaramba {Invincibility/level} & PhantomDJ {Kill Screen Fix}) [Z80]
+ckongb (made by aycaramba {Invincibility/level} & PhantomDJ {Kill Screen Fix}) [Z80]
+ckongg (made by aycaramba {Invincibility/level} & PhantomDJ {Kill Screen Fix}) [Z80]
+ckongjeu (made by aycaramba {Invincibility/level} & PhantomDJ {Kill Screen Fix}) [Z80]
+ckongo (made by aycaramba {Invincibility/level} & PhantomDJ {Kill Screen Fix}) [Z80]
+ckongs (made by aycaramba {Invincibility/level} & PhantomDJ {Kill Screen Fix}) [Z80]
+cleopatr (made by Tourniquet(Region Code)) [68EC020]
+clshrdst (made by ShimaPong) [Z80]
+clshroad (made by ShimaPong) [Z80]
+cmissnx (made by ShimaPong) [M6502]
+cnights2 (made by ShimaPong) [M6502]
+cnightst (made by ShimaPong) [M6502]
+cobracmj (made by Pugsy) [M6809]
+cobracom (made by Pugsy) [M6809]
+condor (made by Pugsy) [8085A]
+cookrace (originally made by Pugsy/replaced with Music Fixed ones made by Shimapong) [M6502]
+cop01 (made by ShimaPong) [Z80]
+cop01a (made by ShimaPong) [Z80]
+cosmccop (made by Pugsy(objects)/improved by ShimaPong(scenery)) [V30]
+cosmicm2 (made byb Pugsy) [8080]
+cosmicmo (made by Pugsy) [8080]
+cosmo (made by Pugsy) [8080]
+cottong (made by ShimaPong) [Z80]
+countrb2 (made by ShimaPong) [Z80]
+countrnb (made by ShimaPong) [Z80]
+countrun (made by ShimaPong) [Z80]
+cppicf (made by Pugsy) [M6502]
+cppicf2 (made by Pugsy) [M6502]
+crash (made by Pugsy) [M6502]
+crazyblk (made by ShimaPong) [Z80]
+crazywar (made by Pugsy) [E1-32N]
+crsword (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+crsword (made by ShimaPong) [68000]
+cruisin (made by Pugsy) [M6809]
+crush (made by ShimaPong) [Z80]
+crush2 (made by ShimaPong) [Z80]
+crush3 (made by ShimaPong) [Z80]
+crush4 (made by ShimaPong) [Z80]
+crushbl (made by ShimaPong) [Z80]
+crushs (made by ShimaPong) [Z80]
+crzralla (made by ShimaPong) [Z80]
+crzrallg (made by ShimaPong) [Z80]
+crzrally (made by ShimaPong) [Z80]
+csilver (made by ShimaPong) [M6809]
+csilverj (made by ShimaPong) [M6809]
+cstlevna (made by ShimaPong) [N2A03]
+csuperas (made by ShimaPong) [M6502]
+ct2k3sa (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ct2k3sp (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+cterrani (made by ShimaPong) [M6502]
+cthd2003 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ctisland (made by ShimaPong) [M6502]
+ctislnd2 (made by ShimaPong) [M6502]
+ctomaday (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ctornado (made by ShimaPong) [M6502]
+ctrpllrp (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+cuebrckj (made by Pugsy) [68000]
+cuebrick (made by Pugsy) [68000]
+cupfinal (made by Tourniquet(Region Code)) [68EC020]
+cyberlip (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+czeroize (made by ShimaPong) [M6502]
+dacholer (made by ShimaPong) [Z80]
+daikaiju (made by ShimaPong) [Z80]
+dangseed (made by ShimaPong) [M6809]
+dankuga (made by Tourniquet(Region Code)) [68EC020]
+daraku (made by Pugsy) [SH-2]
+dariusg (made by Tourniquet(Region Code)) [68EC020]
+dariusgj (made by Tourniquet(Region Code)) [68EC020]
+dariusgu (made by Tourniquet(Region Code)) [68EC020]
+dariusgx (made by Tourniquet(Region Code)) [68EC020]
+darkmist (made by ShimaPong) [Z80]
+darktowr (made by ShimaPong) [HD6309]
+darthvdr (made by Pugsy) [8080]
+darwin (made by ShimaPong) [M6809]
+ddayjlc (made by ShimaPong) [Z80]
+ddayjlca (made by ShimaPong) [Z80]
+ddungeon (made by ShimaPong) [M6809]
+defcmnd (made by Pugsy) [M6809]
+defence (made by Pugsy) [M6809]
+defender (made by Pugsy) [M6809]
+defendg (made by Pugsy) [M6809]
+defendw (made by Pugsy) [M6809]
+demndrgn (made by ShimaPong) [Z80]
+demon (made by Pugsy) [CCPU]
+demoneye (made by Pugsy) [M6502]
+desertwr (made by Pugsy) [V70]
+destryea (made by Pugsy) [CDP1802]
+destryer (made by Pugsy) [CDP1802]
+devilfsg (made by ShimaPong) [Z80]
+devilfsh (made by ShimaPong) [Z80]
+diehard (made by Pugsy) [SH-2]
+digdug (made by ShimaPong) [Z80]
+digdug2 (made by ShimaPong) [M6809]
+digdug2o (made by ShimaPong) [M6809]
+digduga1 (made by ShimaPong) [Z80]
+digdugat (made by ShimaPong) [Z80]
+digdugb (made by ShimaPong) [Z80]
+digger (made by ShimaPong) [Z80]
+diggerc (made by Shimapong) [S2650]
+diggerma (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+digsid (made by ShimaPong) [Z80]
+dino (originally made by ugetab/replaced with better ones by Shimapong) [68000]
+dinoj (originally made by ugetab/replaced with better ones by Shimapong) [68000]
+dinopic {untested} (originally made by ugetab/replaced with better ones by Shimapong) [68000]
+dinopic2 ({untested} originally made by ugetab/replaced with better ones by Shimapong) [68000]
+dinou (originally made by ugetab/replaced with better ones by Shimapong) [68000]
+djboy (made by Pugsy) [Z80]
+djboya (made by Pugsy) [Z80]
+djboyj (made by Pugsy) [Z80]
+dkngjnrb (made by Pugsy {Invincibility} & PhantomDJ {Kill Screen Fix}) [Z80]
+dkngjnrj (made by Pugsy {Invincibility} & PhantomDJ {Kill Screen Fix}) [Z80]
+dkong (made by aycaramba {Invincibility/level} & PhantomDJ {Kill Screen Fix}) [Z80]
+dkong3 (made by ShimaPong) [Z80]
+dkong3b (made by ShimaPong) [Z80]
+dkong3j (made by ShimaPong) [Z80]
+dkongjo (made by aycaramba {Invincibility/level} & PhantomDJ {Kill Screen Fix}) [Z80]
+dkongjo1 (made by aycaramba {Invincibility/level} & PhantomDJ {Kill Screen Fix}) [Z80]
+dkongjp (made by aycaramba {Invincibility/level} & PhantomDJ {Kill Screen Fix}) [Z80]
+dkongjr (made by Pugsy {Invincibility} & PhantomDJ {Kill Screen Fix}) [Z80]
+dkongjrb (made by Pugsy {Invincibility} & PhantomDJ {Kill Screen Fix}) [Z80]
+dkongjrj (made by Pugsy {Invincibility} & PhantomDJ {Kill Screen Fix}) [Z80]
+dkongjrm (made by Pugsy {Invincibility} & PhantomDJ {Kill Screen Fix}) [Z80]
+dkongo (made by aycaramba {Invincibility/level} & PhantomDJ {Kill Screen Fix}) [Z80]
+dockman (made by ShimaPong) [Z80]
+dokidoki (made by ShimaPong) [Z80]
+domino (made by ShimaPong) [Z80]
+dommy (made by Pugsy) [M6502]
+dorodon (made by ShimaPong) [Z80]
+dorodon2 (made by ShimaPong) [Z80]
+dorunrca (made by Pugsy) [Z80]
+dorunru2 (made by Pugsy) [Z80]
+dorunruc (made by Pugsy) [Z80]
+dorunrun (made by Pugsy) [Z80]
+doubledr (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+dowild (made by ShimaPong) [Z80]
+draco (made by Pugsy) [CDP1802]
+drakton (made by Pugsy) [Z80]
+drgnbstr (made by ShimaPong) [M6809]
+drivfrcb (made by ShimaPong) [S2650]
+drivfrcg (made by ShimaPong) [S2650]
+drivfrcp (made by ShimaPong) [S2650]
+drktnjr (made by Pugsy) [Z80]
+drmicro (made by Pugsy) [Z80]
+drtoppel (made by Pugsy) [Z80]
+drtopplj (made by Pugsy) [Z80]
+drtopplu (made by Pugsy) [Z80]
+dungenmu (made by Tourniquet(Region Code)) [68EC020]
+dungeonm (made by Tourniquet(Region Code)) [68EC020]
+dzigzag (made by ShimaPong) [Z80]
+eagle (updated/fixed by ShimaPong) [Z80]
+eagle2 (updated/fixed by ShimaPong) [Z80]
+eagle3 (made by ShimaPong) [Z80]
+eggor (made by ShimaPong) [Z80]
+eggs (made by Pugsy) [M6502]
+eightman (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+elim2 (made by Pugsy) [Z80]
+elim2a (made by Pugsy) [Z80]
+elim2c (made by Pugsy) [Z80]
+elim4 (made by Pugsy) [Z80]
+elim4p (made by Pugsy) [Z80]
+elvact2u (made by Tourniquet(Region Code)) [68EC020]
+elvact2u (made by VisitntX) [68EC020]
+elvactr (made by Tourniquet(Region Code)) [68EC020]
+elvactr (made by VisitntX) [68EC020]
+elvactrj (made by Tourniquet(Region Code)) [68EC020]
+elvactrj (made by VisitntX) [68EC020]
+enigma2 (made by ShimaPong) [Z80]
+enigma2a (made by ShimaPong) [Z80]
+eswat (made by Pugsy) [68000]
+eswatbl (made by Pugsy) [68000]
+eswatj (made by Pugsy) [68000]
+eswatu (made by Pugsy) [68000]
+evilston (made by ShimaPong) [Z80]
+excelsr (made by Shimapong) [68000]
+exerion (made by Mathias Schroeder) [Z80]
+exerionb (made by Mathias Schroeder) [Z80]
+exeriont (made by Mathias Schroeder) [Z80]
+exerizrb (made by ShimaPong) [Z80]
+exodus (updated/fixed by ShimaPong) [Z80]
+explorer (made by Pugsy) [Z80]
+exprrada (made by ShimaPong) [M6502]
+exprraid (made by ShimaPong) [M6502]
+extrmatj (made by ShimaPong) [Z80]
+extrmatn (made by ShimaPong) [Z80]
+eyes (made by ShimaPong) [Z80]
+eyes2 (made by ShimaPong) [Z80]
+eyeszac (made by ShimaPong) [Z80]
+fa (made by Pugsy) [68000] {currently commented out}
+falcon (made by Pugsy) [I8085A]
+falconz (made by Pugsy) [Z80]
+fantazia (updated/fixed by ShimaPong) [Z80]
+fantzn2 (made by Pugsy) [Z80]
+fantzon1 (made by ShimaPong) [68000]
+fantzone (made by ShimaPong) [68000]
+fastlane (made by ShimaPong) [HD6309]
+fatfursa (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+fatfursa (made by ShimaPong) [68000]
+fatfursp (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+fatfursp (made by ShimaPong) [68000]
+fatfury1 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+fatfury2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+fatfury2 (made by ShimaPong) [68000]
+fatfury3 (made by Pugsy & KelvSYC) [68000]
+fatfury3 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+fax (made by Pugsy) [M6502]
+faxa (made by Pugsy) [M6502]
+fbfrenzy (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+fcombat (made by ShimaPong) [Z80]
+ffantasa (made by ShimaPong) [68000]
+ffantasy (made by ShimaPong) [68000]
+fghtatck (made by Pugsy) [68000] {currently commented out}
+fgoal (made by ShimaPong) [M6800]
+fgoala (made by ShimaPong) [M6800]
+fightfev (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+fightfva (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+finalizb (made by ShimaPong) [M6809]
+finalizr (made by ShimaPong) [M6809]
+firebatl (made by Pugsy) [Z80]
+flipshot (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+flkatck (made by ShimaPong) [HD6309]
+flower (made by ShimaPong) [Z80]
+flowers (made by ShimaPong) [Z80]
+flytiger (made by Pugsy) [Z80] {Simple effective NOP of level reset}
+foodf (made by Pugsy) [68000]
+foodf2 (made by Pugsy) [68000]
+foodfc (made by Pugsy) [68000]
+forcebrk (made by ShimaPong) [M6809]
+formatz (made by ShimaPong) [M6809]
+frenzy (made by ShimaPong) [Z80]
+friskyt (made by ShimaPong) [Z80]
+friskyta (made by ShimaPong) [Z80]
+fshark (made by ShimaPong) [68000]
+fsharkbt (made by ShimaPong) [68000]
+fsoccerb (made by ShimaPong) [Z80]
+fswords (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+funkbeeb (made by ShimaPong) [Z80]
+funkybee (made by ShimaPong) [Z80]
+fx (made by ShimaPong) [Z80]
+galaga (made by Pugsy (invincibility & starting level) & unknown mamedev (fast shoot) )
+galagamf (made by Pugsy (invincibility & starting level) & unknown mamedev (fast shoot) )
+galagamk (made by Pugsy (invincibility & starting level) & unknown mamedev (fast shoot) )
+galagamw (made by Pugsy (invincibility & starting level) & unknown mamedev (fast shoot) )
+galagao (made by Pugsy (invincibility & starting level) & unknown mamedev (fast shoot) )
+galap1 (made by Pugsy) [Z80]
+galap4 (made by Pugsy) [Z80]
+galapx (made by Pugsy) [Z80]
+galastrm (made by Pugsy) [68EC020]
+galaxbsf (made by Pugsy) [Z80]
+galaxiaj (made by Pugsy) [Z80]
+galaxian (made by Pugsy) [Z80]
+galaxyfg (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+gallag (made by Pugsy (invincibility & starting level) & unknown mamedev (fast shoot) )
+gallop (made by Pugsy(objects)/improved by ShimaPong(scenery)) [V30]
+galmidw (made by Pugsy) [Z80]
+galmidwo (made by Pugsy) [Z80]
+galtaito (made by Pugsy) [Z80]
+galturbo (made by Pugsy) [Z80]
+ganryu (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+gardia (made by ShimaPong) [Z80]
+gardiab (made by ShimaPong) [Z80]
+garou (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+garou (made by Pugsy) [68000]
+garoubl (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+garoubl (made by Pugsy) [68000]
+garouo (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+garouo (made by Pugsy) [68000]
+garoup (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+garoup (made by Pugsy) [68000]
+gatsbee (made by Pugsy (invincibility & starting level) & unknown mamedev (fast shoot) )
+gberet (made by Pugsy) [Z80]
+gberetb (made by Pugsy) [Z80]
+gblchmp (made by ugetab) [68EC020]
+gekirido (made by Tourniquet(Region Code)) [68EC020]
+genpeitd (made by ShimaPong) [M6809]
+getstar (made by ShimaPong) [Z80]
+getstarb (made by ShimaPong) [Z80]
+getstarj (made by ShimaPong) [Z80]
+gforce2 (made by ShimaPong) [68000]
+gforce2j (made by ShimaPong) [68000]
+ghlpanic (made by Pugsy) [PSX CPU]
+ghostlop (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+gmgalax (Galaxian Invincibility made by Pugsy/Ghostmuncher speed hack made by ugetab) [Z80]
+gng (made by Pugsy & Bugfinder) [M6809]
+gnga (made by Pugsy & Bugfinder) [M6809]
+gngbl (made by Pugsy & Bugfinder) [M6809]
+gngblita (made by Pugsy & Bugfinder) [M6809]
+gngt (made by Pugsy & Bugfinder) [M6809]
+goalx3 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+goonies (made by ShimaPong) [N2A03]
+gorf (made by Pugsy) [Z80]
+gorfpgm1 (made by Pugsy) [Z80]
+gotya (made by Pugsy) [Z80]
+gowcaizr (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+gpilots (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+gpilots (made by Pugsy) [68000]
+gpilotsh (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+gpilotsh (made by Pugsy) [68000]
+gprider1 (made by Pugsy) [68000]
+gradius2 (made by ShimaPong) [68000]
+gradius3 (made by ShimaPong) [68000]
+gradius4 (made by Pugsy) [PPC403]
+gravitar (made by Pugsy) [M6502]
+gravitr2 (made by Pugsy) [M6502]
+gravp (made by Pugsy) [M6502]
+grdforce (made by ShimaPong) [SH-2]
+grdius2a (made by ShimaPong) [68000]
+grdius2b (made by ShimaPong) [68000]
+grdius3a (made by ShimaPong) [68000]
+grdius3e (made by ShimaPong) [68000]
+griffon (made by Pugsy) [Z80]
+grobda (made by ShimaPong) [M6809]
+grobda2 (made by ShimaPong) [M6809]
+grobda3 (made by ShimaPong) [M6809]
+gseeker (made by Tourniquet(Region Code)) [68EC020]
+gseekerj (made by Tourniquet(Region Code)) [68EC020]
+gseekeru (made by Tourniquet(Region Code)) [68EC020]
+gsword (made by ShimaPong) [Z80]
+gsword2 (made by ShimaPong) [Z80]
+gteikob2 (updated/fixed by ShimaPong) [Z80]
+gteikokb (updated/fixed by ShimaPong) [Z80]
+gteikoku (updated/fixed by ShimaPong) [Z80]
+gtstarba (made by ShimaPong) [Z80]
+gunbustr (made by Tourniquet(Region Code)) [68EC020]
+gunlock (made by ShimaPong) [68EC020]
+gunsmoka (made by ShimaPong) [Z80]
+gunsmoke (made by ShimaPong) [Z80]
+gunsmokj (made by ShimaPong) [Z80]
+gunsmoku (made by ShimaPong) [Z80]
+gururin (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+gutangtn (made by ShimaPong) [Z80]
+guzzler (made by ShimaPong/added level select by Pugsy) [Z80]
+gyruss (made by Pugsy) [Z80]
+gyrussce (made by Pugsy) [Z80]
+halley87 (made by Pugsy) [M6809]
+halleycj (made by Pugsy) [M6809]
+halleys (made by Pugsy) [M6809]
+halleysc (made by Pugsy) [M6809]
+hangly (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+hangly2 (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+hangly3 (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+hangon (made by ShimaPong) [68000]
+hangon1 (made by ShimaPong) [68000]
+hangonjr (made by ShimaPong) [Z80]
+harddrb5 (made by Pugsy) [68010]
+harddrb6 (made by Pugsy) [68010]
+harddrc1 (made by Pugsy) [68010]
+harddrcb (made by Pugsy) [68010]
+harddrcg (made by Pugsy) [68010]
+harddrg4 (made by Pugsy) [68010]
+harddriv (made by Pugsy) [68010]
+harddrj6 (made by Pugsy) [68010]
+harddrv1 (made by Pugsy) [68010]
+harddrv2 (made by Pugsy) [68010]
+harddrv3 (made by Pugsy) [68010]
+harddrvb (made by Pugsy) [68010]
+harddrvc (made by Pugsy) [68010]
+harddrvg (made by Pugsy) [68010]
+harddrvj (made by Pugsy) [68010]
+hardhead (made by Pugsy) [Z80]
+hardhedb (made by Pugsy) [Z80]
+headon (made by Pugsy) [Z80]
+headon2 (made by Pugsy) [Z80]
+headonb (made by Pugsy) [Z80]
+headoni (made by ShimaPong) [M6502]
+headons (made by Pugsy) [Z80]
+hellfir1 (made by ShimaPong) [68000]
+hellfir2 (made by ShimaPong) [68000]
+hellfire (made by ShimaPong) [68000]
+hero (made by Pugsy) [S2650]
+herodk (made by Pugsy) [S2650]
+herodku (made by Pugsy) [S2650]
+highspla (made by ShimaPong) [8080]
+highsplt (made by ShimaPong) [8080]
+hippodrm (made by ShimaPong) [68000]
+hiryuken (made by ShimaPong) [Z80]
+hishouza (made by ShimaPong) [68000]
+holeland (made by ShimaPong) [Z80]
+hopmappy (made by Pugsy) [M6809]
+hthero93 (made by Tourniquet(Region Code)) [68EC020]
+hthero94 (made by Tourniquet(Region Code)) [68EC020]
+hthero95 (made by Tourniquet(Region Code)) [68EC020]
+hthro95u (made by Tourniquet(Region Code)) [68EC020]
+hunchbak (made by Pugsy) [S2650]
+hunchbka (made by Pugsy) [S2650]
+hunchbkd (made by Pugsy) [S2650]
+hunchbkg (made by Pugsy) [S2650]
+hunchbks (made by Pugsy) [S2650]
+hvoltage (made by Pugsy) [68000]
+iceclimb (made by Pugsy) [N2A03]
+iceclmbj (made by Pugsy) [N2A03]
+iceclmrj (made by Pugsy) [N2A03]
+iganinju (made by ShimaPong) [68000]
+igmo (made by Pugsy) [Z80]
+imago (made by Pugsy) [Z80]
+imgfight (made by Pugsy) [V30]
+imolagp (made by Pugsy) [Z80]
+imsorry (made by ShimaPong) [Z80]
+imsorryj (made by ShimaPong) [Z80]
+indianbt (made by ShimaPong) [8080]
+indytem2 (made by Pugsy) [68010]
+indytem3 (made by Pugsy) [68010]
+indytem4 (made by Pugsy) [68010]
+indytemd (made by Pugsy) [68010]
+indytemp (made by Pugsy) [68010]
+intcup94 (made by Tourniquet(Region Code)) [68EC020]
+invaddlx (made by Pugsy) [8080]
+invader4 (made by Pugsy) [8080]
+invaderl (made by Pugsy) [8080]
+invaders (made by Pugsy) [8080]
+invadpt2 (made by Pugsy) [8080]
+invadrmr (made by Pugsy) [8080]
+invasion (made by Pugsy) [8080]
+ipminvad (made by Pugsy) [M6502]
+irrmaze (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+irrmaze (made by Pugsy) [68000]
+jackrab2 (made by Pugsy) [Z80]
+jackrabs (made by Pugsy) [Z80]
+jackrabt (made by Pugsy) [Z80]
+jailbrek (made by ShimaPong) [M6809]
+jailbrkb (made by ShimaPong) [M6809]
+jajamaru (made by ShimaPong) [N2A03]
+janjans2 (made by ShimaPong) [V60]
+janptr96 (made by ShimaPong) [Z80]
+janshin (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+jedi (made by Pugsy) [M6502]
+jigkmgri (made by Pugsy) [68000]
+jin (made by Jym) [M6809] {Buggy}
+jituroku (made by ShimaPong) [Z80]
+jockeygp (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+joinem (made by ShimaPong) [Z80]
+jollyjgr (made by ShimaPong) [Z80]
+jongbou (made by ShimaPong) [68000]
+journey (made by ShimaPong) [Z80]
+joyjoy (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+joyman (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+jpopnics (made by Pugsy) [Z80]
+jrking (made by Pugsy {Invincibility} & PhantomDJ {Kill Screen Fix}) [Z80]
+jrpacman (made by ShimaPong (Invincibility) & ugetab (Speed Hack)) [Z80]
+jrpacmbl (made by ShimaPong (Invincibility) & ugetab (Speed Hack)) [Z80]
+jspecter (made by Pugsy) [8080]
+jspectr2 (made by Pugsy) [8080]
+juju (made by Pugsy) [68000]
+jumpcoas (made by ShimaPong) [Z80]
+jumpcoat (made by ShimaPong) [Z80]
+junofrst (made by ShimaPong) [M6809]
+junofstg (made by ShimaPong) [M6809]
+kabukikl (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kabukikl (made by ShimaPong) [68000]
+kabukiz (made by ShimaPong) [Z80]
+kabukizj (made by ShimaPong) [Z80]
+kageki (made by ShimaPong) [Z80]
+kagekia (made by ShimaPong) [Z80]
+kagekij (made by ShimaPong) [Z80]
+kaiserkj (made by ugetab) [68EC020]
+kaiserkn (made by ugetab) [68EC020]
+kaitei (made by ShimaPong) [8080]
+kaiteik (made by ShimaPong) [8080]
+kangaroa (made by ShimaPong) [Z80]
+kangarob (made by ShimaPong) [Z80]
+kangaroo (made by ShimaPong) [Z80]
+karnov (made by ShimaPong) [68000]
+karnovj (made by ShimaPong) [68000]
+karnovr (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kazan (made by ShimaPong) [68000]
+kbash (made by ShimaPong) [68000]
+kbash2 (made by ShimaPong) [68000]
+kf10thep (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kf2k2mp (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kf2k2mp2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kf2k2pla (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kf2k2pls (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kf2k3bl (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kf2k3bla (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kf2k3pcb (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kf2k3pl (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kf2k3upl (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kf2k5uni (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kickboy (made by ShimaPong) [Z80]
+kicker (made by Pugsy) [M6809]
+kicknrun (made by ShimaPong) [Z80]
+kikikai (made by ShimaPong) [Z80]
+killcom (made by ShimaPong) [M6502]
+kingbalj (made by ShimaPong) [Z80]
+kingball (made by ShimaPong) [Z80]
+kingofb (made by ShimaPong) [Z80]
+kizuna (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kkgalax (made by aycaramba {Invincibility/level} & PhantomDJ {Kill Screen Fix}) [Z80]
+klondkp (made by RedBeam) [E1-16T]
+kngtmare (made by ShimaPong) [I8086]
+knightb (made by ShimaPong) [Z80]
+kodure (made by ShimaPong) [68000]
+kof10th (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof2000 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof2000n (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof2001 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof2001h (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof2002 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof2003 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof2k4se (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof94 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof94 (made by ShimaPong) [68000]
+kof95 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof95 (made by ShimaPong) [68000]
+kof95a (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof95a (made by ShimaPong) [68000]
+kof96 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof96 (made by Pugsy) [68000]
+kof96h (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof96h (made by Pugsy) [68000]
+kof97 (made by Bugfinder) [68000] ("No Damage Dealt While Defending")
+kof97 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof97a (made by Bugfinder) [68000] ("No Damage Dealt While Defending") {UNTESTED}
+kof97a (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof97pls (made by Bugfinder) [68000] ("No Damage Dealt While Defending") {UNTESTED}
+kof97pls (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof98 (made by Bugfinder) [68000] ("Enable Omega Rugal") {CHEAT MAY NEED TYPE CHANGING WHEN GAME WORKS}
+kof98 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof98k (made by Bugfinder) [68000] ("Enable Omega Rugal")
+kof98k (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof98n (made by Bugfinder) [68000] ("Enable Omega Rugal")
+kof98n (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof99 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof99a (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof99e (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof99n (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kof99p (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kog (made by Bugfinder) [68000] ("No Damage Dealt While Defending") {UNTESTED}
+kog (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+konam80a (ROM codes converted from various games by Pugsy) [VARIOUS]
+konam80j (ROM codes converted from various games by Pugsy) [VARIOUS]
+konam80k (ROM codes converted from various games by Pugsy) [VARIOUS]
+konam80s (ROM codes converted from various games by Pugsy) [VARIOUS]
+konam80u (ROM codes converted from various games by Pugsy) [VARIOUS]
+konamigt (made by ShimaPong) [68000]
+konek (made by Pugsy) [8080]
+korosuke (made by ShimaPong) [Z80]
+kosmokil (made by ShimaPong) [Z80]
+kotm (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kotm2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kotm2 (made by Pugsy) [68000]
+kotmh (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+kov (made by ShimaPong) [68000]
+kov115 (made by ShimaPong) [68000]
+kov2 (made by ShimaPong) [68000]
+kov2106 (made by ShimaPong) [68000]
+kovj (made by ShimaPong) [68000]
+kram (made by ShimaPong) [M6809]
+kram2 (made by ShimaPong) [M6809]
+kram3 (made by ShimaPong) [M6809]
+krull (made by ShimaPong) [I8086]
+ktiger2 (made by Tourniquet(Region Code)) [68EC020]
+kungfut (made by ShimaPong) [Z80]
+kungfuta (made by ShimaPong) [Z80]
+kuniokub (made by ShimaPong) [M6502]
+kuniokun (made by ShimaPong) [M6502]
+kurikina (made by ShimaPong) [Z80]
+kurikinj (made by ShimaPong) [Z80]
+kurikint (made by ShimaPong) [Z80]
+kurikinu (made by ShimaPong) [Z80]
+ladybgb2 (made by ShimaPong) [Z80]
+ladybug (made by ShimaPong) [Z80]
+ladybugb (made by ShimaPong) [Z80]
+ladybugg (made by ShimaPong) [Z80]
+ladyfrog (made by ShimaPong) [Z80]
+landmakr (made by Tourniquet(Region Code)) [68EC020]
+lans2004 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+laserbat (made by ShimaPong) [S2650]
+lasso (made by ShimaPong) [M6502]
+lastblad (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+lastbld2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+lastbldh (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+lastday (made by Pugsy) [Z80]
+lastdaya (made by Pugsy) [Z80]
+lastmisn (made by ?) [???]
+lastmsnj (made by ?) [???]
+lastmsno (made by ?) [???]
+lastsold (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+lazarian (made by ShimaPong) [S2650]
+lbowling (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+le2 (made by ShimaPong) [68EC020]
+le2j (made by ShimaPong) [68EC020]
+le2u (made by ShimaPong) [68EC020]
+legend (made by ShimaPong) [Z80]
+legendos (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+legion (made by Pugsy) [68000]
+legiono (made by Pugsy) [68000]
+leprechn (made by ShimaPong) [M6502]
+leprechp (made by ShimaPong) [M6502]
+lightbr (made by Tourniquet(Region Code)) [68EC020]
+lizwiz (made by ShimaPong) [Z80]
+locomotn (made by ShimaPong) [Z80]
+lordgun (made by ShimaPong) [68000]
+lresort (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+lunarba1 (made by Pugsy) [M6502]
+lunarbat (made by Pugsy) [M6502]
+mach3 (made by Pugsy) [I8086]
+madalien (made by Pugsy/fixed & other ROM cheats added by ShimaPong) [M6502]
+madalina (made by Pugsy/fixed & other ROM cheats added by ShimaPong) [M6502]
+madball (made by ShimaPong) [Z80]
+madballn (made by ShimaPong) [Z80]
+maddonna (made by Kriptokapi/with some fixing (Part 2) by Pugsy) [68000]
+magdrop2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+magdrop3 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+maglord (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+maglordh (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+magmax (made by ShimaPong) [68000]
+magworm (made by Pugsy) [M6502]
+mahretsu (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+makaimuc (made by Pugsy & Bugfinder) [M6809]
+makaimug (made by Pugsy & Bugfinder) [M6809]
+makaimur (made by Pugsy & Bugfinder) [M6809]
+maketrax (made by ShimaPong) [Z80]
+maketrxb (made by ShimaPong) [Z80]
+malzak (made by ShimaPong) [S2650]
+malzak2 (made by ShimaPong) [S2650]
+manhatan (made by ShimaPong) [M6809]
+marble (made by Pugsy) [68010]
+marble2 (made by Pugsy) [68010]
+marble3 (made by Pugsy) [68010]
+marble4 (made by Pugsy) [68010]
+marineb (updated/fixed by ShimaPong) [Z80]
+mariner (made by Pugsy) [Z80]
+mario (made by Pugsy) [Z80]
+marioj (made by Pugsy) [Z80]
+marioo (made by Pugsy) [Z80]
+markham (updated/fixed by ShimaPong) [Z80]
+martmast (made by ShimaPong) [68000]
+marukodq (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+marvins (made by ShimaPong) [Z80]
+marvland (made by Pugsy) [68000]
+marvlanj (made by Pugsy) [68000]
+masao (made by Pugsy) [Z80]
+masterw (made by ShimaPong) [???]
+masterwu (made by ShimaPong) [???]
+matrim (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+mayday (made by Pugsy) [M6809]
+maydaya (made by Pugsy) [M6809]
+maydayb (made by Pugsy) [M6809]
+mbrush (made by ShimaPong) [Z80]
+mcombat (made by Pugsy) [M6502]
+mcombata (made by Pugsy) [M6502]
+megaforc (made by ShimaPong) [Z80]
+megatack (made by Pugsy) [M6502]
+megaznik (made by ShimaPong) [M6809]
+megazona (made by ShimaPong) [M6809]
+megazonb (made by ShimaPong) [M6809]
+megazonc (made by ShimaPong) [M6809]
+megazone (made by ShimaPong) [M6809]
+merlinmm (made by Pugsy) [Z80]
+mermaid (made by ShimaPong) [Z80]
+metamrph (made by ShimaPong) [68000]
+metamrpj (made by ShimaPong) [68000]
+metamrpu (made by ShimaPong) [68000]
+meteorho (made by Pugsy) [M6502]
+meteorts (made by Pugsy) [M6502]
+metlhawk (made by ShimaPong) [68000]
+metlhwkj (made by ShimaPong) [68000]
+metlsavr (made by ShimaPong) [68000]
+metmqstr (made by ShimaPong) [68000]
+metrocra (made by ShimaPong) [M6809]
+metrocrs (made by ShimaPong) [M6809]
+mexico86 (made by ShimaPong) [Z80]
+mf_bdash (made by ShimaPong) [M6502]
+miexchng (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+mightguy (made by ShimaPong) [Z80]
+mikie (made by ShimaPong) [M6809]
+mikiehs (made by ShimaPong) [M6809]
+mikiej (made by ShimaPong) [M6809]
+milliped (made by Pugsy) [M6502]
+millpac (made by Pugsy) [M6502]
+minasan (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+missile (made by Pugsy) [M6502]
+missile2 (made by Pugsy) [M6502]
+mjgtaste (made by ShimaPong) [SH-2]
+mjneogeo (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+mk (made by Steph & ugetab, Clues and Secret Game Over & CPU Fatality by Pugsy) [TMS34010]
+mk2 (updated by ugetab, Clues and Secret Game Over & CPU Fatality by Pugsy) [TMS34010]
+mk2chal (updated by ugetab, Clues and Secret Game Over & CPU Fatality by Pugsy) [TMS34010]
+mk2r14 (updated by ugetab) [TMS34010]
+mk2r21 (updated by ugetab, Secret Game Over & CPU Fatality by Pugsy) [TMS34010]
+mk2r32 (updated by ugetab, Clues and Secret Game Over & CPU Fatality by Pugsy) [TMS34010]
+mk2r42 (updated by ugetab, Clues and Secret Game Over & CPU Fatality by Pugsy) [TMS34010]
+mk2r91 (updated by ugetab, Clues and Secret Game Over & CPU Fatality by Pugsy) [TMS34010]
+mk3 (made by Steph & ugetab) [TMS34010]
+mk3r10 (made by Steph & ugetab) [TMS34010]
+mk3r20 (made by Steph & ugetab) [TMS34010]
+mkla1 (made by Steph & ugetab, Secret Game Over & CPU Fatality by Pugsy) [TMS34010]
+mkla2 (made by Steph & ugetab, Secret Game Over & CPU Fatality by Pugsy) [TMS34010]
+mkla3 (made by Steph & ugetab, Clues and Secret Game Over & CPU Fatality by Pugsy) [TMS34010]
+mkla4 (made by Steph & ugetab, Clues and Secret Game Over & CPU Fatality by Pugsy) [TMS34010]
+mkprot9 (made by Steph & ugetab, Secret Game Over & CPU Fatality by Pugsy) [TMS34010]
+mkr4 (made by Steph , Clues and Secret Game Over & CPU Fatality by Pugsy) [TMS34010]
+mkyawdim (made by Steph & ugetab, Clues and Secret Game Over & CPU Fatality by Pugsy) [TMS34010]
+mmatrix (made by Pugsy) [68000] {COMMENTED OUT}
+mmatrixj (made by Pugsy) [68000] {COMMENTED OUT}
+moguchan (made by ShimaPong) [Z80]
+mole (made by ShimaPong) [M6502]
+momoko (made by ShimaPong) [Z80]
+monkeyd (made by aycaramba {Invincibility/level} & PhantomDJ {Kill Screen Fix}) [Z80]
+monster2 (made by ShimaPong) [Z80] {NOT WORK ON 0.101u1 OR LATER}
+monsterb (made by ShimaPong) [Z80]
+moonal2 (made by Pugsy) [Z80]
+moonal2b (made by Pugsy) [Z80]
+moonaln (made by Pugsy) [Z80]
+moonbase (made by Pugsy) [8080]
+mooncmw (updated/fixed by ShimaPong) [Z80]
+mooncrgx (updated/fixed by ShimaPong) [Z80]
+mooncrs2 (updated/fixed by ShimaPong) [Z80]
+mooncrs3 (updated/fixed by ShimaPong) [Z80]
+mooncrsa (updated/fixed by ShimaPong) [Z80]
+mooncrsb (updated/fixed by ShimaPong) [Z80]
+mooncrsg (updated/fixed by ShimaPong) [Z80]
+mooncrst (updated/fixed by ShimaPong) [Z80]
+mooncrsu (updated/fixed by ShimaPong) [Z80]
+moonwar (made by Pugsy) [Z80]
+moonwara (made by Pugsy) [Z80]
+mosyougi (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+motos (made by ShimaPong) [M6809]
+mouser (made by Pugsy) [Z80]
+mouserc (made by Pugsy) [Z80]
+mp_gaxe2 (made by ShimaPong) [68000]
+mp_soni2 (made by ShimaPong) [68000]
+mp_sor2 (made by ShimaPong) [68000]
+mrdo (made by Pugsy) [Z80]
+mrdofix (made by Pugsy) [Z80]
+mrdot (made by Pugsy) [Z80]
+mrdoy (made by Pugsy) [Z80]
+mrdu (made by Pugsy) [Z80]
+mrgoemon (made by ShimaPong) [Z80]
+mrheli (made by ShimaPong) [V30]
+mrjong (made by ShimaPong) [Z80]
+mrkougar (made by ShimaPong) [Z80]
+mrkougb (made by ShimaPong) [Z80]
+mrkougb2 (made by ShimaPong) [Z80]
+mrkougr2 (made by ShimaPong) [Z80]
+mrlo (made by Pugsy) [Z80]
+mrviking (made by ShimaPong) [Z80]
+mrvikngj (made by ShimaPong) [Z80]
+ms4plus (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ms5pcb (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ms5plus (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+mschamp (made by ShimaPong (Invincibility) & ugetab (Speed Hack)) [Z80]
+mshutlj2 (made by Pugsy) [Z80]
+mshuttle (made by Pugsy) [Z80]
+mshuttlj (made by Pugsy) [Z80]
+mslug (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+mslug2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+mslug3 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+mslug3b6 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+mslug3h (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+mslug4 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+mslug5 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+mslug5h (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+mslugx (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+mspacmab (made by ShimaPong (Invincibility) & ugetab (Speed Hack)) [Z80]
+mspacman (made by ShimaPong (Invincibility) & ugetab (Speed Hack)) [Z80]
+mspacmat (made by ShimaPong (Invincibility) & ugetab (Speed Hack)) [Z80]
+mspacmbe (made by ShimaPong (Invincibility) & ugetab (Speed Hack)) [Z80]
+mspacmnf (made by ShimaPong (Invincibility) & ugetab (Speed Hack)) [Z80]
+mspacpls (made by ShimaPong (Invincibility) & ugetab (Speed Hack)) [Z80]
+mt_astro (made by Pugsy) [Z80]
+mt_beast (made by ShimaPong) [68000]
+mt_fshrk (made by Pugsy) [68000]
+mt_gaxe2 (made by ShimaPong) [68000]
+mt_gng (made by Pugsy) [68000]
+mt_lastb (made by ShimaPong) [68000]
+mt_mwalk (made by Pugsy) [68000]
+mt_shar2 (made by ShimaPong) [68000]
+mt_soni2 (made by ShimaPong) [68000]
+mt_stbld (made by ShimaPong) [68000]
+mugsmash (made by ShimaPong) [68000]
+multigam {10. Ice Climber} (made by Pugsy) [N2A03]
+multigam {12. Road Fighter} (made by Pugsy) [N2A03] 
+multigam {15. Super Mario} (made by Pugsy) [N2A03]
+multigam {16. Twin Bee} (based on NES codes by Whipon) [N2A03]
+multigam {18. New Type} (made by Pugsy) [N2A03]
+multigam {20. Son Son} (made by Pugsy) [N2A03]
+multigam {21. Galaga} (made by Pugsy) [N2A03]
+multigam {22. F1 Race} (made by Pugsy) [N2A03]
+multigam {24. Bomb Jack (Mighty Bombjack)} (made by Pugsy) [N2A03]
+multigam {25. Ninja} (made by Pugsy) [N2A03]
+multigam {26. Gorilla 3} (made by Pugsy) [N2A03]
+multigam {28. Mr Mario (Mario Bros)} (made by Pugsy) [N2A03]
+multigam {3. Star Force} (made by Pugsy) [N2A03]
+multigam {33. Arabian} (made by Pugsy) [N2A03]
+multigam {4. Sky Destroyer} (made by Pugsy) [N2A03]
+multigam {7.  Pac Man} (based on NES code by megaman_exe) [N2A03]
+multigam {9. Circus Charlie} (made by Pugsy) [N2A03]
+multigm3 {10. Galaga} (made by Pugsy) [N2A03]
+multigm3 {11. Star Force} (made by Pugsy) [N2A03]
+multigm3 {12. King Kong (Donkey Kong Jr.)} (made by Pugsy) [N2A03]
+multigm3 {13. Pooyan} (made by Pugsy) [N2A03]
+multigm3 {14. Wonder Boy (made by Pugsy) [N2A03]
+multigm3 {16. Popeye} (made by Pugsy) [N2A03]
+multigm3 {17. Circus Troupe (Circus Charlie)} (made by Pugsy) [N2A03]
+multigm3 {18. Exerion} (made by Pugsy) [N2A03]
+multigm3 {19. Mappy} (made by Pugsy) [N2A03]
+multigm3 {2.  Super Mario} (made by Pugsy) [N2A03]
+multigm3 {20. Sky Destroyer} (made by Pugsy) [N2A03]
+multigm3 {21. Gorilla 3} (made by Pugsy) [N2A03]
+multigm3 {6.  Ice Climber} (made by Pugsy) [N2A03]
+multigm3 {7.  Road Fighter} (made by Pugsy) [N2A03]
+multigm3 {8.  Pac Man} (based on NES code by megaman_exe) [N2A03]
+multigm3 {9.  Bomber Man} (made by Pugsy) [N2A03]
+multigmb {10. Ice Climber} (made by Pugsy) [N2A03]
+multigmb {12. Road Fighter} (made by Pugsy) [N2A03] 
+multigmb {15. Super Mario} (made by Pugsy) [N2A03]
+multigmb {16. Twin Bee} (based on NES codes by Whipon) [N2A03]
+multigmb {18. New Type} (made by Pugsy) [N2A03]
+multigmb {20. Son Son} (made by Pugsy) [N2A03]
+multigmb {21. Galaga} (made by Pugsy) [N2A03]
+multigmb {22. F1 Race} (made by Pugsy) [N2A03]
+multigmb {24. Bomb Jack (Mighty Bombjack)} (made by Pugsy) [N2A03]
+multigmb {25. Ninja} (made by Pugsy) [N2A03]
+multigmb {26. Gorilla 3} (made by Pugsy) [N2A03]
+multigmb {28. Mr Mario (Mario Bros)} (made by Pugsy) [N2A03]
+multigmb {3. Star Force} (made by Pugsy) [N2A03]
+multigmb {33. Arabian} (made by Pugsy) [N2A03]
+multigmb {4. Sky Destroyer} (made by Pugsy) [N2A03]
+multigmb {7.  Pac Man} (based on NES code by megaman_exe) [N2A03]
+multigmb {9. Circus Charlie} (made by Pugsy) [N2A03]
+mutnat (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+mx5000 (made by ShimaPong) [HD6309]
+myststno (made by Pugsy) [M6502]
+mystston (made by Pugsy) [M6502]
+nam1975 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+navarone (made by ShimaPong) [8080]
+ncombat (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ncombath (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ncommand (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ncv1 (made by Pugsy (lives) & many more by ShimaPong (invincibility & others)) [68000]
+ncv1j (made by Pugsy (lives) & many more by ShimaPong (invincibility & others)) [68000]
+ncv1j2 (made by Pugsy (lives) & many more by ShimaPong (invincibility & others)) [68000]
+ncv2 (made by Pugsy (obsolete fix & lives) & many more by ShimaPong (invincibility & others)) [68000]
+ncv2j (made by Pugsy (obsolete fix & lives) & many more by ShimaPong (invincibility & others)) [68000]
+neobombe (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+neocup98 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+neodrift (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+neomrdo (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+netwars (made by ShimaPong) [Z80]
+newpuc2 (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+newpuc2b (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+newpuckx (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+nextfase (made by Pugsy) [8085A]
+nightlov (made by ShimaPong) [Z80]
+ninja (made by ShimaPong) [Z80]
+ninjakun (made by ShimaPong) [Z80]
+ninjamas (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ninjaw (made by ShimaPong) [68000]
+ninjawj (made by ShimaPong) [68000]
+nitd (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+nitdbl (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+nitedrvr (made by ShimaPong) [M6502]
+nmaster (made by ShimaPong) [68000]
+nmouse (made by ShimaPong) [Z80]
+nmouseb (made by ShimaPong) [Z80]
+nost (made by ShimaPong) [68000]
+nostj (made by ShimaPong) [68000]
+nostk (made by ShimaPong) [68000]
+nprinces (made by ShimaPong) [Z80]
+nprincsb (made by ShimaPong) [Z80]
+nprincso (made by ShimaPong) [Z80]
+nprincsu (made by ShimaPong) [Z80]
+nrallyx (made by ShimaPong) [Z80]
+nratechu (made by Pugsy) [Z80]
+nss_actr (made by ShimaPong) [G65C816]
+nss_fzer (made by ShimaPong) [G65C816]
+nsub (made by ShimaPong) [Z80]
+nunchaku (made by ShimaPong) [Z80]
+nyny (made by Pugsy) [M6809]
+nynyg (made by Pugsy) [M6809]
+ojousan (made by ShimaPong) [Z80]
+omni (made by ShimaPong) [Z80]
+opaopa (made by Pugsy) [Z80]
+outline (made by Pugsy) [S2650]
+overtop (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ozmawar2 (made by ShimaPong) [8080]
+ozmawars (made by ShimaPong) [8080]
+pacgal (made by ShimaPong (Invincibility) & ugetab (Speed Hack)) [Z80]
+pacheart (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+pacman (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+pacmanbl (made by ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+pacmanf (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+pacmania (made by RedBeam) [M6809]
+pacmanij (made by RedBeam) [M6809]
+pacmod (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+pacplus (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+paintlad (made by ShimaPong) [68000]
+paintrlr (made by ShimaPong) [Z80]
+pandoras (made by Pugsy) [M6809]
+panicbom (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+paperboy (made by Pugsy) [T11]
+paperbr1 (made by Pugsy) [T11]
+paperbr2 (made by Pugsy) [T11]
+paradise (made by ShimaPong) [Z80]
+paradlx (made by ShimaPong) [Z80]
+paranoia (made by Pugsy) [HuC6280]
+parodisj (made by Pugsy) [KONAMI] 
+parodius (made by Pugsy) [KONAMI]
+pballoon (made by ShimaPong) [M6502]
+pbobbl2j (made by Tourniquet(Region Code)) [68EC020]
+pbobbl2n (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+pbobbl2u (made by Tourniquet(Region Code)) [68EC020]
+pbobbl2x (made by Tourniquet(Region Code)) [68EC020]
+pbobbl3j (made by Tourniquet(Region Code)) [68EC020]
+pbobbl3u (made by Tourniquet(Region Code)) [68EC020]
+pbobbl4j (made by Tourniquet(Region Code)) [68EC020]
+pbobbl4u (made by Tourniquet(Region Code)) [68EC020]
+pbobble2 (made by Tourniquet(Region Code)) [68EC020]
+pbobble3 (made by Tourniquet(Region Code)) [68EC020]
+pbobble4 (made by Tourniquet(Region Code)) [68EC020]
+pbobblen (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+pbobblna (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+pc_1942 (made by ShimaPong) [N2A03]
+pc_ddrgn (made by ShimaPong) [N2A03]
+pc_grdue (made by ShimaPong) [N2A03]
+pc_grdus (made by ShimaPong) [N2A03]
+pc_mario (made by Pugsy) [N2A03]
+pc_miket (made by ugetab\Parasyte) [N2A03]
+pc_mman3 (made by ugetab)[N2A03] <-- These are converted Game Genie codes from the NES 6502 version, RAM cheats would be easy though GG uses ROM codes!
+pc_ngai2 (made by ugetab) [N2A03]
+pc_ngai3 (made by ugetab) [N2A03]
+pc_ngaid (made by ShimaPong) [N2A03]
+pc_radr2 (made by ShimaPong) [N2A03]
+pc_radrc (made by ShimaPong) [N2A03]
+pc_rkats (made by ugetab) [N2A03] <-- These are converted Game Genie codes from the NES 6502 version, RAM cheats would be easy though GG uses ROM codes!
+pc_rygar (made by ShimaPong) [N2A03]
+pc_smb (made by ugetab) [N2A03]
+pc_smb2 (made by ugetab) [N2A03]
+pc_smb3 (made by ugetab) [N2A03]
+pc_tmnt (made by ugetab) [N2A03]
+pc_ynoid (made by Pugsy) [N2A03] <-- These are converted Game Genie codes from the NES 6502 version, RAM cheats would be easy though GG uses ROM codes!
+pengo (made by ShimaPong) [Z80]
+pengo2 (made by ShimaPong) [Z80]
+pengo2u (made by ShimaPong) [Z80]
+pengo3u (made by ShimaPong) [Z80]
+pengo4 (made by ShimaPong) [Z80]
+pengob (made by ShimaPong) [Z80]
+penta (made by ShimaPong) [Z80]
+perfrman (made by Pugsy) [Z80]
+perfrmau (made by Pugsy) [Z80]
+pestplce (made by Pugsy) [Z80]
+peterpak (made by Pugsy) [68010]
+pgoal (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+phantoma (made by Pugsy) [M6502]
+phelios (made by Pugsy) [68000]
+phoenix (made by Pugsy) [8085A]
+phoenix3 (made by Pugsy) [8085A]
+phoenixa (made by Pugsy) [8085A]
+phoenixb (made by Pugsy) [8085A]
+phoenixc (made by Pugsy) [8085A]
+phoenixt (made by Pugsy) [8085A]
+phozon (made by ShimaPong) [M6809]
+pickin (made by ShimaPong) [Z80]
+pignewt (made by ShimaPong) [Z80]
+pignewta (made by ShimaPong) [Z80]
+piranha (made by ShimaPong (Invincibility) & ugetab (Speed Hack)) & PhantomDJ (Split Screen Fix) ) [Z80]
+piranhah (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+piranhao (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+piratetr (made by ShimaPong) [M6502]
+pisces (made by ShimaPong) [Z80]
+piscesb (made by ShimaPong) [Z80]
+pitfall2 (made by Pugsy) [Z80]
+pitfalla (made by Pugsy) [Z80]
+pitfallu (made by Pugsy) [Z80]
+pkunwar (made by ShimaPong) [Z80]
+pkunwarj (made by ShimaPong) [Z80]
+plegendj (made by ShimaPong) [68000]
+plegends (made by ShimaPong) [68000]
+pleiadbl (made by Pugsy) [8085A]
+pleiadce (made by Pugsy) [8085A]
+pleiads (made by Pugsy) [8085A]
+plumppop (made by Pugsy) [Z80]
+plusalph (made by ShimaPong) [68000]
+pnyaa (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+polaris (made by Pugsy) [Z80]
+polarisa (made by Pugsy) [Z80]
+ponpoko (made by ShimaPong) [Z80]
+ponpokov (made by ShimaPong) [Z80]
+pop_hh (made by Pugsy) [Z80]
+popbounc (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+popflama (made by ShimaPong) [Z80]
+popflamb (made by ShimaPong) [Z80]
+popflame (made by ShimaPong) [Z80]
+popflamn (made by ShimaPong) [Z80]
+popnpop (made by Tourniquet(Region Code)) [68EC020]
+popnpopj (made by Tourniquet(Region Code)) [68EC020]
+popnpopu (made by Tourniquet(Region Code)) [68EC020]
+popper (made by ShimaPong) [Z80]
+porter (made by ShimaPong) [Z80]
+portman (made by ShimaPong) [Z80]
+potogold (made by ShimaPong) [M6502]
+powerbal (made by ShimaPong) [68000]
+powerbls (made by ShimaPong) [68000]
+preisle2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+prmtmfgo (made by Tourniquet(Region Code)) [68EC020]
+prmtmfgt (made by Tourniquet(Region Code)) [68EC020]
+pspikes2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+pturn (made by ShimaPong) [Z80]
+puchicar (made by Tourniquet(Region Code)) [68EC020]
+puchicrj (made by Tourniquet(Region Code)) [68EC020]
+puckman (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+puckmana (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+puckmanf (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+puckmanh (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+puckmod (made by ShimaPong (Invincibility) & ugetab (Speed Hack) & PhantomDJ (Split Screen Fix) ) [Z80]
+pulstar (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+punipic {untested} (made by RedBeam) [68000]
+punipic2 {untested} (made by RedBeam) [68000]
+punipic3 {untested} (made by RedBeam) [68000]
+punisher (made by RedBeam) [68000]
+punishrj (made by RedBeam) [68000]
+punishru (made by RedBeam) [68000]
+puzzldpr (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+puzzledp (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+pwrgoal (made by Tourniquet(Region Code)) [68EC020]
+qb3 (made by Pugsy) [CCPU]
+qix (made by Pugsy) [M6809]
+qix2 (made by Pugsy) [M6809]
+qixa (made by Pugsy) [M6809]
+qixb (made by Pugsy) [M6809]
+quantum (made by Pugsy) [68000]
+quantum1 (made by Pugsy) [68000]
+quantump (made by Pugsy) [68000]
+quasar (made by Pugsy) [S2650]
+quasara (made by Pugsy) [S2650]
+quizdai2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+quizdais (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+quizkof (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+r2dtank (made by ShimaPong) [M6809]
+radarsc1 (made by ShimaPong) [Z80]
+radarscp (made by ShimaPong) [Z80]
+radarzn1 (made by Pugsy) [S2650]
+radarznt (made by Pugsy) [S2650]
+radarzon (made by Pugsy) [S2650]
+radrad (made by ShimaPong) [Z80]
+raflesia (made by ShimaPong) [Z80]
+ragnagrd (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ragnagrd (updated/fixed by ShimaPong) [68000]
+raiders (made by ShimaPong) [S2650]
+raiders5 (made by Pugsy) [Z80]
+raidrs5t (made by Pugsy) [Z80]
+rallys (made by Pugsy) [M6502]
+rallyx (made by ShimaPong) [Z80]
+rallyxm (made by ShimaPong) [Z80]
+rastan (made by Neil Pierce) [68000]
+rastanu (made by Neil Pierce) [68000]
+rastanu2 (made by Neil Pierce) [68000]
+rastsag1 (made by Neil Pierce) [68000]
+rastsaga (made by Neil Pierce) [68000]
+rayforce (made by ShimaPong) [68EC020]
+rayforcj (made by ShimaPong) [68EC020]
+rbff1 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+rbff1a (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+rbff2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+rbff2h (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+rbff2k (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+rbffspec (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+rbtapper (made by Pugsy) [Z80]
+redalert (made by ShimaPong) [M6502]
+redbaron (made by Pugsy) [M6502]
+redclash (updated/fixed by ShimaPong) [Z80]
+redclask (updated/fixed by ShimaPong) [Z80]
+redclsha (made by ShimaPong) [Z80]
+redrobin (made by Pugsy) [Z80]
+redufo (updated/fixed by ShimaPong) [Z80]
+regulus (made by ShimaPong) [Z80]
+reguluso (made by ShimaPong) [Z80]
+regulusu (made by ShimaPong) [Z80]
+renegade (made by ShimaPong) [M6502]
+renju (made by ShimaPong) [Z80]
+repulse (made by Shimapong) [Z80]
+rezon (made by ShimaPong) [68000]
+rezont (made by ShimaPong) [68000]
+rf2 (made by ShimaPong) [68000]
+ribbit (made by ShimaPong) [68000]
+ridefgtj (made by Tourniquet(Region Code)) [68EC020]
+ridefgtu (made by Tourniquet(Region Code)) [68EC020]
+ridhero (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ridheroh (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ridingf (made by Tourniquet(Region Code)) [68EC020]
+ringkin2 (made by ShimaPong) [Z80]
+ringkin3 (made by ShimaPong) [Z80]
+ringking (made by ShimaPong) [Z80]
+ringkinw (made by ShimaPong) [Z80]
+ringrage (made by Tourniquet(Region Code)) [68EC020]
+ringragj (made by Tourniquet(Region Code)) [68EC020]
+ringragu (made by Tourniquet(Region Code)) [68EC020]
+ripoff (made by Pugsy) [CCPU]
+roadf (made by ShimaPong) [M6809]
+roadf2 (made by ShimaPong) [M6809]
+roadrun1 (made by Pugsy) [68010]
+roadrun2 (made by Pugsy) [68010]
+roadrunn (made by Pugsy) [68010]
+robby (made by ugetab & ShimaPong) [Z80]
+roboarmy (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+robokdj2 (made by ShimaPong) [Z80]
+robokid (made by ShimaPong) [Z80]
+robokidj (made by ShimaPong) [Z80]
+robotron (made by Pugsy) [M6809]
+robotryo (made by Pugsy) [M6809]
+rockduck (made by Pugsy) [M6502]
+roldfrga (made by ShimaPong) [68000]
+roldfrog (made by ShimaPong) [68000]
+rongrngg (made by RedBeam) [Z80]
+rongrngj (made by RedBeam) [Z80]
+rongrong (made by RedBeam) [Z80]
+rotaryf (made by ShimaPong) [8085A]
+rotd (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+rotd (made by Pugsy) [68000]
+route16 (made by Pugsy) [Z80]
+route16a (made by Pugsy) [Z80]
+route16b (made by Pugsy) [Z80]
+routex (made by Pugsy) [Z80]
+rpatrol (made by ShimaPong) [Z80]
+rpatrolb (made by ShimaPong) [Z80]
+rranger (made by Pugsy) [Z80]
+rugrats (made by ShimaPong) [Z80]
+rundeep (made by ShimaPong) [Z80]
+rushatck (made by Pugsy) [Z80]
+rygar (made by ShimaPong) [Z80]
+rygar2 (made by ShimaPong) [Z80]
+rygar3 (made by ShimaPong) [Z80]
+rygarj (made by ShimaPong) [Z80]
+s1945p (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+saiyugb1 (made by ShimaPong) [HD6309]
+saiyugb2 (made by ShimaPong) [HD6309]
+saiyugou (made by ShimaPong) [HD6309]
+samsh5sh (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+samsh5sn (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+samsh5sp (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+samsho (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+samsho2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+samsho3 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+samsho3a (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+samsho4 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+samsho5 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+samsho5b (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+samsho5h (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+samshoh (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+sasuke (made by ShimaPong) [M6502]
+savagere (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+savagere (made by ShimaPong) [68000]
+sb2003 (made by Pugsy) [E1-32XT]
+sb2003a (made by Pugsy) [E1-32XT]
+sboblbob (made by Pugsy) [Z80]
+sbuggera (made by Pugsy) [8085A]
+scfinals (made by Tourniquet(Region Code)) [68EC020]
+scion (made by ShimaPong) [Z80]
+scionc (made by ShimaPong) [Z80]
+scobra (made by Pugsy) [Z80]
+scobrab (made by Pugsy) [Z80]
+scobras (made by Pugsy) [Z80]
+scobrase (made by Pugsy) [Z80]
+scorpion (updated/fixed by ShimaPong) [Z80]
+scorpnmc (updated/fixed by ShimaPong) [Z80]
+scramb2 (made by Pugsy) [Z80]
+scramblb (made by Pugsy) [Z80]
+scramble (made by Pugsy) [Z80]
+scrambls (made by Pugsy) [Z80]
+scregg (made by Pugsy) [M6502]
+scrpiona (updated/fixed by ShimaPong) [Z80]
+scrpionb (updated/fixed by ShimaPong) [Z80]
+sdodgeb (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+sdungeon (made by ShimaPong) [M6809]
+searthia (made by Pugsy) [8080]
+searthin (made by Pugsy) [8080]
+seganinj (made by ShimaPong) [Z80]
+seganinu (made by ShimaPong) [Z80]
+sengokh (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+sengoku (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+sengoku2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+sengoku2 (made by ShimaPong) [68000]
+sengoku3 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+senjyo (made by ShimaPong) [Z80]
+sf (made by ShimaPong) [68000]
+sfjp (made by ShimaPong) [68000]
+sflush (made by ShimaPong) [M6800]
+sfp (made by ShimaPong) [68000]
+sfus (made by ShimaPong) [68000]
+sfx (made by ShimaPong) [Z80]
+sgladiat (made by ShimaPong) [Z80]
+shangkid (made by ShimaPong) [Z80]
+shangnle (made by ShimaPong) [68000]
+shangon (made by ShimaPong) [68000]
+shangon1 (made by ShimaPong) [68000]
+shangon2 (made by ShimaPong) [68000]
+shangon3 (made by ShimaPong) [68000]
+shangupb (made by ShimaPong) [68000]
+shaolins (made by Pugsy) [M6809]
+shdancbl (made by ShimaPong) [68000]
+shdance1 (made by ShimaPong) [68000]
+shdancej (made by ShimaPong) [68000]
+shdancer (made by ShimaPong) [68000]
+shinobi (made by ShimaPong) [68000]
+shinobi1 (made by ShimaPong) [68000]
+shinobi2 (made by ShimaPong) [68000]
+shinobi3 (made by ShimaPong) [68000]
+shinobi4 (made by ShimaPong) [68000]
+shinobi5 (made by ShimaPong) [68000]
+shinoblb (made by ShimaPong) [68000]
+shinobld (made by ShimaPong) [68000]
+shinobls (made by ShimaPong) [68000]
+shocktr2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+shocktra (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+shocktro (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+shollow (made by ShimaPong) [Z80]
+shollow2 (made by ShimaPong) [Z80]
+shootoub (made by ugetab) [M6502]
+shootouj (made by ugetab) [M6502]
+shootout (made by ugetab) [M6502]
+shpeng (made by ShimaPong) [Z80]
+shuttlei (made by ShimaPong) [8080]
+sicv (made by Pugsy) [8080]
+silkroad (made by ShimaPong) [68EC020]
+silvland (made by ShimaPong) [Z80]
+sinvemag (made by Pugsy) [8080]
+sinvzen (made by Pugsy) [8080]
+sisv (made by Pugsy) [8080]
+sisv2 (made by Pugsy) [8080]
+sitv (made by Pugsy) [8080]
+skelagon (made by ShimaPong) [Z80]
+skyarmy (made by ShimaPong) [Z80]
+skybase (made by Pugsy) [Z80]
+skychut (made by ShimaPong) [M6502]
+skyfox (made by ShimaPong) [Z80]
+skylance (made by ShimaPong) [Z80]
+skylancr (made by ShimaPong) [Z80]
+skyraidr (updated/fixed by ShimaPong) [Z80]
+skyshark (made by ShimaPong) [68000]
+skyskipr (made by Tourniquet) [Z80]
+skywolf (made by ShimaPong) [Z80]
+skywolf2 (made by ShimaPong) [Z80]
+slapbtjp (made by ShimaPong) [Z80]
+slapbtuk (made by ShimaPong) [Z80]
+slapfgtr (made by ShimaPong) [Z80]
+slapfiga (made by ShimaPong) [Z80]
+slapfigh (made by ShimaPong) [Z80]
+smashtv (made by Pugsy/ugetab) [TMS34010]
+smashtv4 (made by Pugsy/ugetab) [TMS34010]
+smashtv5 (made by Pugsy/ugetab) [TMS34010]
+smashtv6 (made by Pugsy/ugetab) [TMS34010]
+smooncrs (updated/fixed by ShimaPong) [Z80]
+snapjack (made by Pugsy) [Z80]
+socbrala (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+socbrawl (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+solarq (made by Pugsy) [CCPU]
+solfight (made by ShimaPong) [8080]
+solomon (made by Pugsy) [Z80]
+solomonj (made by Pugsy) [Z80]
+sonicbom (made by ShimaPong) [68000]
+sonicwi2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+sonicwi3 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+sonofphx (made by Shimapong) [Z80]
+spacbat2 (updated/fixed by ShimaPong) [Z80]
+spacbatt (updated/fixed by ShimaPong) [Z80]
+spaceat2 (made by Pugsy) [8080]
+spaceatt (made by Pugsy) [8080]
+spacecho (made by Pugsy) [Z80]
+spacedx (made by Pugsy) [68000]
+spacedxj (made by Pugsy) [68000]
+spacedxo (made by Pugsy) [68000]
+spaceftr (made by Pugsy) [CCPU]
+spaceg (made by ShimaPong) [Z80]
+spaceinj (made by ShimaPong) [Z80]
+spaceint (made by ShimaPong) [Z80]
+spaceph (made by ShimaPong) [8080]
+spacewar (made by Pugsy) [CCPU]
+spacewr3 (made by Pugsy) [8080]
+spacezap (made by Pugsy) [Z80]
+spacfura (made by Pugsy) [Z80]
+spacfurb (made by Pugsy) [Z80]
+spacfury (made by Pugsy) [Z80]
+spcdrag (updated/fixed by ShimaPong) [Z80]
+spcdraga (updated/fixed by ShimaPong) [Z80]
+spceking (made by Pugsy) [8080]
+spcewars (made by Pugsy) [8080]
+spcinv95 (made by Tourniquet(Region Code)) [68EC020]
+spcinvdj (made by Pugsy) [68EC020]
+spcking2 (made by Pugsy) [Z80]
+spcnv95u (made by Tourniquet(Region Code)) [68EC020]
+spcpostn (made by Pugsy) [Z80]
+spctbird (updated/fixed by ShimaPong) [Z80]
+speakres (made by Pugsy) [Z80]
+spectar (made by Pugsy) [M6502]
+spectar1 (made by Pugsy) [M6502]
+speedfrk (made by Pugsy) [CCPU]
+spfghmk2 (made by Pugsy) [M6502]
+spfgmk22 (made by Pugsy) [M6502]
+spiders (made by ShimaPong with bugfix by Pugsy) [M6809]
+spiders2 (made by ShimaPong with bugfix by Pugsy) [M6809]
+spiero (made by Pugsy) [Z80]
+spinmast (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+spinner (made by ShimaPong with bugfix by Pugsy) [M6809]
+splash (made by ShimaPong) [68000]
+splash10 (made by ShimaPong) [68000]
+sprglbpg (made by ShimaPong) [Z80]
+sprglobp (made by ShimaPong) [Z80]
+springer (made by Pugsy) [Z80]
+sprint4 (made by Pugsy) [M6502]
+sprint4a (made by Pugsy) [M6502]
+sprint8 (made by Pugsy) [M6800]
+sprmatkd (made by Pugsy) [M6502]
+sraider (made by ShimaPong) [Z80]
+sranger (made by Pugsy) [Z80]
+srangerb (made by Pugsy) [Z80]
+srangerw (made by Pugsy) [Z80]
+srdarwin (made by Pugsy) [M6809]
+srdarwnj (made by Pugsy) [M6809]
+srdmissin (made by ShimaPong) [Z80]
+ssideki (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ssideki2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ssideki3 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ssideki4 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+ssingles (made by ShimaPong) [???]
+sspacaho (made by Pugsy) [Z80]
+sspacat2 (made by Pugsy) [Z80]
+sspacat3 (made by Pugsy) [Z80]
+sspacatc (made by Pugsy) [Z80]
+sspaceat (made by Pugsy) [Z80]
+sspeedr (made by Pugsy) [Z80]
+ssrj (made by Pugsy) [Z80]
+sstarbtl (made by ShimaPong) [M6502]
+sstingry (made by ShimaPong) [68000]
+sstrangr (made by Pugsy) [8080]
+sstrngr2 (made by Pugsy) [8080]
+stactics (made by ShimaPong) [8080]
+stakwin (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+stakwin2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+starcas (made by Pugsy) [CCPU]
+starcas1 (made by Pugsy) [CCPU]
+starcase (made by Pugsy) [CCPU]
+starcasp (made by Pugsy) [CCPU]
+starfora (made by ShimaPong) [Z80]
+starforb (made by ShimaPong) [Z80]
+starforc (made by ShimaPong) [Z80]
+starfore (made by ShimaPong) [Z80]
+stargate (made by Pugsy) [M6809]
+starhawk (made by Pugsy) [CCPU]
+starjack (made by ShimaPong) [Z80]
+starjacs (made by ShimaPong) [Z80]
+starlstr (made by ShimaPong) [N2A03]
+startrek (made by Pugsy) [Z80]
+startrkd (made by Pugsy) [M6809]
+stellcas (made by Pugsy) [CCPU]
+stinger (made by ShimaPong) [Z80]
+stinger2 (made by ShimaPong) [Z80]
+stlforce (made by RedBeam) [68000]
+stoffy (made by ShimaPong) [M6809]
+stratgys (made by ShimaPong) [Z80]
+stratgyx (made by ShimaPong) [Z80]
+stratvob (made by Pugsy) [Z80]
+stratvox (made by Pugsy) [Z80]
+streakng (made by ShimaPong) [Z80]
+strfbomb (made by Pugsy) [Z80]
+strhoop (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+strtheat (made by Pugsy) [Z80]
+subroc3d (made by ShimaPong) [Z80]
+supcrash (made by Pugsy) [Z80]
+superg (made by Pugsy) [Z80]
+supergx (made by Pugsy) [Z80]
+superinv (made by Pugsy) [8080]
+superspy (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+suprglob (made by ShimaPong) [Z80]
+suprmatk (made by Pugsy) [M6502]
+supxevs (made by ShimaPong) [N2A03]
+sutapper (made by Pugsy) [Z80]
+suzume (made by ShimaPong) [Z80]
+svc (made by Kriptokapi/fixed by ShimaPong) [68000]
+svc (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+svcboot (made by Kriptokapi/fixed by ShimaPong) [68000]
+svcboot (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+svcpcb (made by Kriptokapi/fixed by ShimaPong) [68000]
+svcpcb (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+svcpcba (made by Kriptokapi/fixed by ShimaPong) [68000]
+svcpcba (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+svcplus (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+svcplusa (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+svcsplus (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+swarm (made by Pugsy) [Z80]
+swimmer (made by ShimaPong) [Z80]
+swimmera (made by ShimaPong) [Z80]
+swimmerb (made by ShimaPong) [Z80]
+sxevious (made by ShimaPong) [Z80]
+tactcan2 (made by Pugsy) [Z80]
+tactcian (made by Pugsy) [Z80]
+talbot (made by ShimaPong) [Z80]
+tankbatt (made by ShimaPong) [M6502]
+tapper (made by Pugsy) [Z80]
+tappera (made by Pugsy) [Z80]
+targ (made by Pugsy) [M6502]
+targc (made by Pugsy) [M6502]
+taxidrvr (made by ShimaPong) [Z80]
+tceptor (made by ShimaPong) [68000]
+tceptor2 (made by ShimaPong) [68000]
+tcobra2 (made by Tourniquet(Region Code)) [68EC020]
+tcobra2u (made by Tourniquet(Region Code)) [68EC020]
+teddybb (Invincibility made by ShimaPong/Time made by Pugsy) [Z80]
+teddybbo (made by ShimaPong/Time made by Pugsy) [Z80]
+teetert (made by Pugsy) [M6502]
+tekken (made by Pugsy) [PSX CPU]
+tekkena (made by Pugsy) [PSX CPU]
+tekkenb (made by Pugsy) [PSX CPU]
+tekkenc (made by Pugsy) [PSX CPU]
+thedeep (made by ShimaPong) [Z80]
+theend (made by Pugsy) [Z80]
+theends (made by Pugsy) [Z80]
+theglob (made by ShimaPong) [Z80]
+theglob2 (made by ShimaPong) [Z80]
+theglob3 (made by ShimaPong) [Z80]
+theglobp (made by ShimaPong) [Z80]
+thepit (made by ShimaPong) [Z80]
+thepitb (made by ShimaPong) [Z80]
+thepitc (made by ShimaPong) [Z80]
+theroes (made by RedBeam) [68000]
+thnderxa (made by Shimapong) [KONAMI]
+thnderxb (made by Shimapong) [KONAMI]
+thnderxj (made by Shimapong) [KONAMI]
+thunderx (made by Shimapong) [KONAMI]
+tigerh (made by ShimaPong) [Z80]
+tigerh2 (made by ShimaPong) [Z80]
+tigerhb1 (made by ShimaPong) [Z80]
+tigerhb2 (made by ShimaPong) [Z80]
+tigerhj (made by ShimaPong) [Z80]
+timber (made by ShimaPong) [Z80]
+tmht22pe (made by ShimaPong) [68000]
+tmnt2 (made by ShimaPong) [68000]
+tmnt22pu (made by ShimaPong) [68000]
+tmnt2a (made by ShimaPong) [68000]
+tndrcade (made by Pugsy) [68000]
+tndrcadj (made by Pugsy) [68000]
+toffy (made by ShimaPong) [M6809]
+tokia (made by Pugsy) [68000]
+tokib (made by Pugsy) [68000]
+tokij (made by Pugsy) [68000]
+tokio (mace by ShimaPong) [Z80]
+tokiob (made by ShimaPong) [Z80]
+tokiou (made by ShimaPong) [Z80]
+tokisens (made by ShimaPong) [Z80]
+tokiu (made by Pugsy) [68000]
+topgun (made by ShimaPong) [N2A03]
+tophunta (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+tophuntr (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+toprollr (made by ShimaPong) [Z80]
+topsecrt (made by ShimaPong) [68000]
+torid2gg (made by Pugsy) [68000]
+toride2g (made by Pugsy) [68000]
+toride2j (made by Pugsy) [68000]
+tornado1 (made by Pugsy) [M6809]
+tp84 (made by ShimaPong) [M6809]
+tp84a (made by ShimaPong) [M6809]
+tp84b (made by ShimaPong) [M6809]
+tpgolf (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+trally (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+transfrm (made by ShimaPong) [Z80]
+trckydca (made by ShimaPong) [Z80]
+trckydoc (made by ShimaPong) [Z80]
+tron (Invincibility made by Pugsy - RAM/ROM check by ShimaPong) [Z80]
+tron2 (Invincibility made by Pugsy - RAM/ROM check by ShimaPong) [Z80]
+tron3 (Invincibility made by Pugsy - RAM/ROM check by ShimaPong) [Z80]
+tron4 (Invincibility made by Pugsy - RAM/ROM check by ShimaPong) [Z80]
+trstar (made by Tourniquet(Region Code)) [68EC020]
+trstarj (made by Tourniquet(Region Code)) [68EC020]
+trstaro (made by Tourniquet(Region Code)) [68EC020]
+trstaroj (made by Tourniquet(Region Code)) [68EC020]
+tubep (made by ShimaPong) [Z80]
+tubepb (made by ShimaPong) [Z80]
+tugboat (made by ShimaPong) [M6502]
+turfmast (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+turpin (made by ShimaPong) [Z80]
+turpins (made by ShimaPong) [Z80]
+turtles (made by ShimaPong) [Z80]
+tutankhm (made by Pugsy) [M6809]
+tutankst (made by Pugsy) [M6809]
+twinqix (made by Tourniquet(Region Code)) [68EC020]
+twinspri (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+twotiger (made by ShimaPong) [Z80]
+twotigrc (made by ShimaPong) [Z80]
+tws96 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+tylz (made by Pugsy) [I8086]
+typhoon (made by ShimaPong) [KONAMI]
+ufosensb (made by ShimaPong) [Z80]
+ufosensi (made by ShimaPong) [Z80]
+umk3 (made by Steph/ugetab) [TMS34010]
+umk3r10 (made by Steph/ugetab) [TMS34010]
+umk3r11 (made by Steph/ugetab) [TMS34010]
+uniwars (updated/fixed by ShimaPong) [Z80]
+upndown (made by Pugsy) [Z80]
+upndownu (made by Pugsy) [Z80]
+vautour (made by Pugsy) [I8085A]
+vautourz (made by Pugsy) [Z80]
+venture (made by ShimaPong) [M6502]
+venture2 (made by ShimaPong) [M6502]
+venture4 (made by ShimaPong) [M6502]
+venus (made by Pugsy) [Z80]
+viewpoin (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+vliner (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+vlinero (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+vsgradus (made by ShimaPong) [N2A03]
+vsgshoe (made by Pugsy) [N2A03]
+vulcan (made by ShimaPong) [68000]
+wakuwak7 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+wallst (made by ugetab) [S2650]
+warpwar2 (made by ShimaPong) [8080]
+warpwarp (made by ShimaPong) [8080]
+warpwarr (made by ShimaPong) [8080]
+warrior (made by Pugsy) [CCPU]
+wecleman (made by ShimaPong) [68000]
+wexpresb (made by ShimaPong) [M6502]
+wexpresc (made by ShimaPong) [M6502]
+wexpress (made by ShimaPong) [M6502]
+wh1 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+wh1h (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+wh1ha (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+wh2 (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+wh2j (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+wh2jh (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+whp (made by Pugsy {misc & Generic neogeo RAM/ROM check}) [68000]
+wilytowr (made by Pugsy) [Z80]
+wink (made by ShimaPong) [Z80]
+winka (made by ShimaPong) [Z80]
+wiping (made by ShimaPong) [Z80]
+wjammers (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+wonder3 (made by RedBeam) [68000]
+woodpek (made by ShimaPong) [Z80]
+wotw (made by Pugsy) [CCPU]
+wotwc (made by Pugsy) [CCPU]
+wrally (made by Pugsy) [68000]
+wrallya (made by Pugsy) [68000]
+wrallyb (made by Pugsy) [68000]
+xevios (made by ShimaPong) [Z80]
+xevious (made by ShimaPong) [Z80]
+xeviousa (made by ShimaPong) [Z80]
+xeviousb (made by ShimaPong) [Z80]
+xeviousc (made by ShimaPong) [Z80]
+xmcota (made by RedBeam) [68000]
+xmcotaa (made by RedBeam) [68000]
+xmcotah (made by RedBeam) [68000]
+xmcotaj1 (made by RedBeam) [68000]
+xmcotaj2 (made by RedBeam) [68000]
+xmcotajr (made by RedBeam) [68000]
+xmcotau (made by RedBeam) [68000]
+xmultipl (made by ShimaPong) [V30]
+xmvsf (made by Pugsy) [68000]
+xmvsfa (made by Pugsy) [68000]
+xmvsfar1 (made by Pugsy) [68000]
+xmvsfb (made by Pugsy) [68000]
+xmvsfh (made by Pugsy) [68000]
+xmvsfj (made by Pugsy) [68000]
+xmvsfjr1 (made by Pugsy) [68000]
+xmvsfjr2 (made by Pugsy) [68000]
+xmvsfr1 (made by Pugsy) [68000]
+xmvsfu (made by Pugsy) [68000]
+xmvsfur1 (made by Pugsy) [68000]
+xxmissio (made by ShimaPong) [Z80]
+yachtmn (made by ShimaPong) [Z80]
+yamato (made by ShimaPong) [Z80]
+yamato2 (made by ShimaPong) [Z80]
+yankeedo (made by Pugsy) [Z80]
+yiear (made by ShimaPong) [M6809]
+yiear2 (made by ShimaPong) [M6809]
+zedblade (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+zektor (made by Pugsy) [Z80]
+zero (made by Pugsy) [M6809]
+zero2 (made by Pugsy) [M6809]
+zerohour (made by ShimaPong) [Z80]
+zerotime (made by Pugsy) [Z80]
+zerotrgt (made by Pugsy) [M6809]
+zigzag (made by Pugsy/improved (3 to 2 part) by ShimaPong) [Z80]
+zigzag2 (made by Pugsy/improved (3 to 2 part) by ShimaPong) [Z80]
+zintrckb (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+zipzap (made by ShimaPong) [68000]
+zoar (made by Pugsy) [M6502]
+zodiack (made by ShimaPong) [Z80]
+zookeep (made by Pugsy) [M6809]
+zookeep2 (made by Pugsy) [M6809]
+zookeep3 (made by Pugsy) [M6809]
+zoom909 (made by ShimaPong) [Z80]
+zupapa (made by Pugsy {Generic neogeo RAM/ROM check}) [68000]
+
+------------------------------------------------------------------------------
+   SECTION 10     Games utilising EEPROM/Mapped Memory cheats with credits
+------------------------------------------------------------------------------
+
+This is a list of games that currently make use of cheats that poke direct to
+mapped memory or EEPROM. Generally these cheats are to reveal game functions
+such as hidden game characters. Note: If the mapped memory being poked is
+actually program code it is classed as a ROM cheat!
+
+EEPROM:
+gunbird2 [Unlock Aine] (Found by Tourniquet)
+s1945iii [Unlock X-36] (Found by Tourniquet)
+sailormn/sailormo [REGION] (Found by either sum or zanhsieh - REPLACED WITH STANDARD CHEATS 0.126)
+sfa3/sfa3b/sfa3u/sfa3ur1/sfz3a/sfz3ar1/sfz3j/sfz3jr1/sfz3jr2 [Colour Unlock] (Found by RedBeam)
+
+Mapped Memory:
+sb2003 + sb2003a [EEPROM region] (Found by unknown)
+mk3 + clones [Unlock Smoke] (Found by Tourniquet) [CHEAT DISABLED - NO LONGER WORKS, replaced with alternative character cheat]
+umk3 + clones [Unlock Secret Chars] (Found by Tourniquet) [CHEAT DISABLED - NO LONGER WORKS, replaced with alternative character cheat]
+kof99 + clones [Unlock Secret Chars] (Found by unknown) [CHEAT DISABLED - NO LONGER WORKS, replaced with enable character cheat]
+
+------------------------------------------------------------------------------
+       SECTION 11     Games utilising Forced Range cheats with credits
+------------------------------------------------------------------------------
+
+This is a list of the games currently make use of the force range type cheat as
+added in the new cheat engine. It basically allows you to take a location and
+make sure that the value stays within a range of values. An example is Arkanoid
+where by finding the Y pos of the ball sprite we can ensure by a simple cheat
+that the ball never leaves the playing area as soon as it attempts to we poke
+the location with a value which will effectively push the ball up a bit so that
+you can have another go at hitting the ball. They will hopefully used more in
+future as people understand them.
+
+4in1boot (found by Pugsy)
+ark1ball (found by Pugsy)
+arkangc (found by Pugsy)
+arkangc2 (found by Pugsy)
+arkanoid (found by Pugsy)
+arkatayt (found by Pugsy)
+arkatour (found by Pugsy)
+arkbloc2 (found by Pugsy)
+arkblock (found by Pugsy)
+arkgcbl (found by Pugsy)
+arkmcubl (found by Pugsy)
+arknoidj (found by Pugsy)
+arknoidu (found by Pugsy)
+arknoiuo (found by Pugsy)
+arkretrn (found by Pugsy)
+arktayt2 (found by Pugsy)
+armwrest (found by Pugsy)
+bestri (found by Pugsy)
+bombbee (found by Pugsy)
+cannonb (found by Pugsy)
+cannonb2 (found by Pugsy)
+catt (found by Pugsy)
+cflyball (found by ShimaPong)
+cgraplop (found by ShimaPong)
+cgraplp2 (found by ShimaPong)
+cham24 (found by Pugsy)
+circus (found by ugetab)
+cotton (found by ShimaPong)
+cottonj (found by ShimaPong)
+cottonu (found by ShimaPong)
+cutieq (found by Pugsy)
+drakton (found by Pugsy)
+freekckb (found by Pugsy)
+freekick (found by Pugsy)
+funkyjet (found by ugetab)
+funkyjetj (found by ugetab)
+funystrp (found by ShimaPong)
+geebee (found by Pugsy)
+geebeeg (found by Pugsy)
+gensitou (found by ShimaPong)
+gigasb (found by Pugsy)
+gigasm2b (found by Pugsy)
+goindol (found by Pugsy)
+goindolj (found by Pugsy)
+goindolu (found by Pugsy)
+grindsta (found by ShimaPong)
+grindstm (found by ShimaPong)
+homo (found by Pugsy)
+legion (found by ShimaPong)
+legiono (found by ShimaPong)
+madball (found by Pugsy)
+madballn (found by Pugsy)
+mcatadv (found by Pugsy)
+mcatadvj (found by Pugsy)
+mt_eswat (found by ShimaPong)
+mustang (found by ShimaPong)
+mustangb (found by ShimaPong)
+mustangs (found by ShimaPong)
+neobattl (found by Pugsy)
+nmouse (found by Pugsy)
+nmouseb (found by Pugsy)
+ohmygod (found by Pugsy/mike_myers)
+oigas (found by Pugsy)
+paddle2 (found by Pugsy)
+pinbo (found by ShimaPong)
+pinboa (found by ShimaPong)
+pinbos (found by ShimaPong)
+popbounc (found by Pugsy)
+prehislu (found by ShimaPong)
+preshisle (found by ShimaPong)
+puchicar (found by Pugsy)
+puchicrj (found by Pugsy)
+puckpepl (found by ShimaPong)
+quester (found by ugetab)
+quiz18k (found by Pugsy)
+radm (found by Pugsy)
+radmu (found by Pugsy)
+radr (found by Pugsy)
+radru (found by Pugsy)
+sbrkout (found by Pugsy)
+snowbro3 (found by Pugsy)
+snowbroa (found by Pugsy)
+snowbrob (found by Pugsy)
+snowbroc (found by Pugsy)
+snowbroj (found by Pugsy)
+snowbros (found by Pugsy)
+spyhnt2a (found by ugetab)
+spyhunt2 (found by ugetab)
+tenkomoj (found by ShimaPong)
+twinactn (found by ShimaPong)
+twinsqua (found by ShimaPong)
+ufosensb (found by ShimaPong)
+ufosensi (found by ShimaPong)
+vasara (found by ShimaPong)
+vasara2 (found by ShimaPong)
+vasara2a (found by ShimaPong)
+vfive (found by ShimaPong)
+wallc (found by Pugsy)
+wallca (found by Pugsy)
+wintbob (found by Pugsy)
+
+
+------------------------------------------------------------------------------
+SECTION 12   Games utilising Dynamic (Relative Addressing) cheats with credits
+------------------------------------------------------------------------------
+
+This is a list of games that currently use 'dynamic' cheats. Dynamic cheats
+are basically just relative addressed cheats. The problem with some games when
+you do a cheat search is that you can easily find for example the energy
+location and poking it will seem to work fine, but if you advance a level you
+will find that the cheat no longer works. In fact the next time you play the
+level you found the cheat for you will probably find that the cheat doesn't
+work there either. I've included my method of how to find your own 'dynamic'
+cheats under this list...enjoy ;-) Again this list is sorted in the order that
+cheats were added (oldest cheats first).
+
+samsho (found by Pugsy)
+kabukikl (found by Pugsy/+ Magic found by ShimaPong)
+samsho2 (found by Pugsy)
+savagere (found by Pugsy/ + Invincibility by ShimaPong)
+lastblad/lastblda/lastsold (found by Pugsy)
+3countb (found by Pugsy)
+lastbld2 (found by Pon)
+dadandrn/mmaulers (found by Tourniquet)
+ncv2/ncv2j (found by Pugsy)
+galaxyfg (found by KelvSYC)
+gunhohki/mysticri (found by ShimaPong)
+ncv1/ncv1j/ncv1j2 (found by ShimaPong)
+kengo (found by ShimaPong)
+rdft2/rdft2a/rdft2a2/rdft2j/rdft2t/rdft22kc/rdft2us (found by ShimaPong)
+tenkomoj/tenkomor (found by ShimaPong)
+vamphalf (found by ShimaPong)
+danceyes (found by ShimaPong)
+mmatrix/mmatrixj (found by ShimaPong)
+prikura (found by ShimaPong)
+rsgun (found by ShimaPong)
+tophunta/tophuntr (found by ShimaPong)
+neobombe (found by ShimaPong)
+dreamwld (found by Pugsy)
+avsp/avspa/avsph/avspj/avspu (found by RedBeam)
+punisher/punishrj/punishru/punipic/punipic2/punipic3 {punipic/punipic2/punipic3 untested} (found by RedBeam)
+gunforce/gunforcj/gunforcu (found by Pugsy)
+
+------------------------------------------------------------------------------
+              SECTION 13     General list of work to be done
+------------------------------------------------------------------------------
+
+Old List:-
+----------
+
+Don't expect this list to change too much - there's more pressing issues for
+me to deal with normally - I do have a crack at them occasionally.
+
+Look at replicating Mania Challenge cheats for The Main Event
+The Return of Ishtar needs more work - present cheats has problems in b12 ...
+More codes for 88 Games
+I, Robot more codes needed
+Baluba-louk no Densetsu more codes?
+Knock Out/Triple Punch - Look at the invincibility cheats
+My Hero - Round Select codes
+Syougi No Tatsujin - more cheats?
+Flash Gal - check for level select cheats
+Cosmo Gang the Video - check out both versions unsure which is NOW the original
+one the cheat was made for.
+Look at Fatal Fury 4 cheats - rename add more?
+Body Slam - room for lots more cheats, see other wrestling games for possible cheats
+More cheats for Big Pro Wrestling! needed
+More cheats for Yosaku To Donbee
+Add Select score cheats for the Super Sidekicks series of games
+Do Infinite Health, Infinite Ammo, Always have Gun/Get Gun Now! cheats for all levels
+ and both players for the game Top Hunter
+Ultraman look at cheats and check....problems encountered
+Rename 'type' cheats for dfeveron, requires better descriptions
+More cheats for invad2ct - Space Invaders II
+More cheats for Snow Bros. 2
+Air Buster - possible trigger cheat missing from Side shot, Powerball & B cheats. Investigate
+Soldam (Japan) - possibility of a lot more colour related cheats, + needs some other cheats
+U.S. Classic - more cheats required, PL2 cheats not yet possible! (beta 1)
+raphero game is a clone, but more cheats here than for the others  bigbang&tdragon2 (maybe the raphero cheats can be replicated)
+tmekprot - there's more cheats for tmek, though the cheats don't seem to exist for tmekprot (look into program code)
+mslug4 & clone - look at cheats, weapon cheats appear not to work properly
+
+
+Newest List:-
+-----------------------------------------------------------------------
+Update the remaining [ ] format comment cheats to the separated by ---- format [COMPLETE AS FAR AS NEEDED]
+Fix any flickering invincibility cheats to stop the flickering using ROM cheats [AS AND WHEN]
+Convert single byte multi-part cheats to poke 2,4,8 bytes [AS AND WHEN]
+Convert cheats that are poking the same location into list cheats  + poss. dropping Now! duplicated cheats [AS AND WHEN]
+

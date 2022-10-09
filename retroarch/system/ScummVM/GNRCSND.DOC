@@ -1,0 +1,23 @@
+
+GNRCSND.DRV     Author:  Stuart Goldstein, Sierra On-Line, Inc.
+
+                This is a "generic" Sierra sound driver that will drive
+                any multi-timbral sound module.  Also required is an MPU
+                compatible interface.  This driver generates MIDI on all
+                channels, but here is the breakdown:
+
+                        channel     use
+                        -------     ----------------
+                           1        Single voice (attention DX7 owners)
+                         2 - 9      Multi-timbral channels
+                          10        Rhythm channel (Roland MT-32 key assigns)
+                          11        Additional single voice
+                          12        Additional single voice
+
+                Simply copy the GNRCSND.DRV file to your game disk one or
+                hard disk and reinstall.  You should see a new selection
+                for "Generic Multi-timbral Sound Module".
+
+                This driver will not generate any program change commands
+                or system exclusive messages.
+

@@ -1,0 +1,18 @@
+{
+  "version": "1.2",
+  "default_core_path": "",
+  "default_core_name": "",
+  "label_display_mode": 0,
+  "right_thumbnail_mode": 0,
+  "left_thumbnail_mode": 0,
+  "items": [
+    {
+      "path": "/media/_DUMMY/Xtreme_Turbo_Boost!.PBP",
+      "label": "Xtreme_Turbo_Boost!",
+      "core_path": "/media/retroarch/cores/km_ppsspp_xtreme_amped_libretro.so",
+      "core_name": "Sony - PSP (km_PPSSPP Xtreme Amped)",
+      "crc32": "",
+      "db_name": ""
+    }
+  ]
+}

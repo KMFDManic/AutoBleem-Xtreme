@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gameList>
+<game>
+<path>/media/retroarch/retroboot/applaunchers/RetroArch.eslauncher</path>
+<name>RetroArch</name>
+<desc>Return to RetroArch</desc>
+<image>/media/retroarch/thumbnails/Applications/Named_Boxarts/RetroArch.png</image>
+</game>
+</gameList>

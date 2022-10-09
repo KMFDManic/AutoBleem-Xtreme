@@ -1,0 +1,3 @@
+shaders = 1
+
+shader0 = "/media/retroarch/shaders/stock.glsl"

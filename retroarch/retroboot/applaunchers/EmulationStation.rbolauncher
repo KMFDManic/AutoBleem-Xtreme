@@ -1,0 +1,5 @@
+# Retroboot App Launcher
+
+LAUNCHER_LABEL="EmulationStation"
+LAUNCHER_DESCRIPTION="Switch to EmulationStation"
+LAUNCHER_SCRIPT_PATH="/media/retroarch/retroboot/bin/boot_enable_es.sh"

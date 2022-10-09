@@ -1,0 +1,5 @@
+# Retroboot App Launcher
+
+LAUNCHER_LABEL="OpenBOR"
+LAUNCHER_DESCRIPTION="Open Beats of Rage v3.0"
+LAUNCHER_SCRIPT_PATH="/media/retroarch/apps/openbor/launchopenbor.sh"
