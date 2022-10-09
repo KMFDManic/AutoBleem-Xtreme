@@ -1,0 +1,368 @@
+﻿.-= Code C++ and shell scripts =-.
+.-= Kód C++ a skripty shellu =-.
+.-= Database maintenance =-.
+.-= Údržba databázy =-.
+.-= Graphics =-.
+.-= Grafika =-.
+.-= Localization support =-.
+.-= Podpora lokalizácie =-.
+.-= Retroboot and emulation cores =-.
+.-= Retroboot a jadrá emulácie =-.
+.-= Testing =-.
+.-= Testovanie =-.
+.lic file not found
+.lic súbor sa nepodarilo nájsť
+About
+O programe
+Advanced
+Rozšírené
+All Games
+Všetky hry
+Are you sure you want to delete
+Ste si istý, že chcete zmazať
+Are you sure you want to flush all covers?
+Naozaj chcete zmazať všetky obaly?
+Are you sure?
+Ste si tým istý?
+AutoBleem
+AutoBleem
+AutoBleem resume points not available in RetroArch.
+AutoBleem obnoví body, ktoré nie sú dostupné v RetroArch.
+AutoBleem Theme:
+Téma AutoBleemu:
+Background Music:
+Hudba na pozadí:
+Backspace
+Vrátiť
+Bin file failed to verify
+Nepodarilo sa overiť súbor bin.
+Button Guide
+Sprievodca tlačidlami
+Cancel
+Zrušiť
+Caps
+Veľké písmená
+Card
+Karta
+Change MC
+Vymeniť Pamäťovú kartu
+Change RetroBoot System
+Zmeniť systém RetroBoot
+Change USB Games Sub-Directory
+Zmeniť podadresár hier USB
+Clock:
+CPU hodiny
+Close
+Zatvoriť
+Configuration
+Nastavenia
+CONFIGURED
+NAKONFIGUROVANÝ
+Confirm
+Potvrdiť
+Copy
+Kopírovať
+Cover image file not found
+Nie je možné nájsť obal hry.
+Cover Style:
+Štýl obalu:
+Cue file not found
+Nie je možné nájsť cue súbor.
+Custom
+Vlastné
+Custom Memory Cards
+Vlastné Pamäťové karty
+Customize AutoBleem settings
+Prispôsobiť nastavenia AutoBleem
+Decompressing ecm:
+Rozbaľovanie ECM:
+Defragment Card
+Defragmentovať kartu
+Delete
+Zmazať
+Delete !SaveState folder for game
+Odstrániť !SaveState priečinok pre hru
+Delete card
+Zmazať kartu
+Delete Game
+Odstrániť hru
+Do you want to save memcards data ?
+Chcete uložiť údaje z kariet?
+Download latest:
+Najnovšia verzia:
+Edit game parameters
+Upraviť parametre hry
+Edit Memory Card information
+Upraviť informácie Pamäťovej karty
+EmulationStation
+EmulationStation
+Emulator config MENU
+Menu Emulátora
+Enter
+Spustiť
+Enter new card name
+Zadajte nový názov karty
+Enter new game name
+Zadajte nový názov hry
+Enter new name for card
+Zadajte nový názov karty
+Enter new name for memory card
+Zadajte nový názov pamäťovej karty
+Entry
+Údaj
+Exit to EvoUI
+Odísť do EvoUI
+Failed to delete
+Nepodarilo sa odstrániť
+Favorite Games
+Obľúbené hry
+Favorite:
+Obľúbené
+Flush covers
+Zmazané obaly
+Folder:
+Priečinok:
+Frameskip:
+Preskočenie snímok:
+Free
+Voľné
+Free space
+Voľné miesto
+Game
+Hra
+GAME
+HRA
+Game failed to verify:
+Nepodarilo sa overiť hru:
+Game file not found
+Nepodarilo sa nájsť hru
+Game History
+História hry
+Game Manager
+Správca hier
+Game manager - Select game
+Správca hry - Vybrať hru
+Game.ini file not found
+Súbor hry .ini sa nenašiel.
+Game.ini file not valid
+Súbor hry .ini sa nepodarilo overiť.
+Game:
+Hra:
+games
+hry
+Games changed. Press
+Hry sa zmenili. Stlač
+games scanned
+nájdených hier
+GFX Filter:
+Grafický filter:
+Go back
+Späť
+Hardware Information
+Informácie o hardvéri
+High res:
+Vysoké rozlíšenie:
+In Boot Menu: Safe Power Off The Console
+V bootovacom menu: Bezpečne vypnúť konzolu
+In Game
+V hre
+In Retroarch Game
+V Retroarch hre
+Internal
+Originálne
+INTERNAL
+ORIGINÁLNE
+Internal Games
+Originálne hry
+Language:
+Jazyk:
+Last Played:
+Naposledy hrané:
+Link Block
+Spojiť blok
+Link end Block
+Spojiť koniec bloku
+Loading ... Please Wait ...
+Nahrávam ... Čakajte prosím ...
+Lock data:
+Uzamknúť zmeny:
+MEMORY CARD
+PAMÄŤOVÁ KARTA
+Memory Card Manager
+Správca pamäťových kariet
+Memory Card:
+Pamäťová karta:
+Memory Cards
+Pamäťové karty
+Move Cursor
+Presunúť kurzor
+Moving :
+Presúvam:
+Music:
+Hudba:
+New Card
+Nová karta
+New GamePad found
+Nájdený nový Gamepad
+Next Game Platform
+Nasledujúca hracia platforma
+No disc name
+Disk hry bez názvu
+No discs
+Žiadne disky
+OK
+OK
+OOPS! Game crashed. Resume point not available.
+Och! Hra spadla. Bod obnovy nie je k dispozícii.
+Open Retroarch Menu
+Otvoriť ponuku Retroarch
+Options
+Nastavenia
+Original
+Originálne hry
+Page
+Strana
+pcsx.cfg file not found
+Súbor pcsx.cfg sa nenašiel
+Player
+Hráč
+Players
+Hráči
+Please confirm
+Potvrďte prosím
+PLEASE CONNECT GAMEPAD TO PLAYSTATION CLASSIC
+PRIPOJTE PROSÍM GAMEPAD K PLAYSTATIONU CLASSIC
+Please wait ... deleting
+Čakajte prosím ... odstraňujem
+Please wait ... deleting covers...
+Čakajte prosím... mažem obaly...
+Plugin:
+Plugin:
+POWER
+VÝKON
+Power Off
+Vypnúť
+POWERING OFF... PLEASE WAIT
+VYPÍNAM... ČAKAJTE PROSÍM
+Press a key for
+Stlačte hocijaké tlačidlo
+Press any DPAD button (to determine if it's digital or analogue)
+Stlačte ktorékoľvek tlačidlo DPAD (aby ste zistili, či je digitálne alebo analógové)
+Press |@X| to save controller mapping, or |@O| to retry configuration
+Stlačte |@X| na premapovanie ovládača, alebo |@O| na zopakovanie konfigurácie
+Published by:
+Vydavateľ:
+Quick scroll to next letter
+Rýchlo prejsť na nasledujúci znak
+Quit emulation - back to AutoBleem
+Ukončiť emuláciu - návrat do AutoBleemu
+Random Game
+Náhodná hra
+Re/Scan
+Pre/Hľadať
+ReadMe file not found
+Súbor ReadMe sa nenašiel
+Region:
+Oblasť:
+Reload Cards
+Znovu načítať karty
+Rename
+Premenovať
+RESET
+RESETOVAŤ
+RESUME
+OBNOVA
+Resume game from saved state point
+Pokračovať v hre od uloženého stavu
+Resume point saved to slot
+Bod obnovy uložený na pozíciu
+RetroArch
+RetroArch
+RetroArch is not installed
+RetroArch nie je nainštalovaný
+Run using RetroBoot
+Spustiť cez Retroboot
+Scanline Level:
+Úroveň obrazových riadkov:
+Scanlines:
+Obrazové riadky:
+Scanning...
+Vyhľadávam...
+Select
+Vybrať
+Select memory card
+Vybrať Pamäťovú kartu
+Select or cancel highlighted option
+Vybrať alebo zrušiť zvýraznenú voľbu
+Select PS1 Game Category
+Vybrať kategóriu PS1 hry
+SELECT RESUME SLOT TO LOAD
+VYBERTE POZÍCIU, Z KTOREJ SA NAHRÁ PRERUŠENÁ HRA
+Select RetroBoot Platform
+Vyberte platformu RetroBoot
+Select Right Card
+Vyberte kartu v pravo
+SELECT SLOT TO SAVE STATE
+VYBERTE POZÍCIU, NA KTORÚ SA ULOŽÍ ROZOHRANÁ HRA
+Serial:
+Serial:
+SETTINGS
+NASTAVENIA
+Share MC
+Zdieľať Pamäťovú kartu
+Show Internal Games:
+Zobraziť originálne hry:
+Showing Timeout (0 = no timeout):
+Zobrazenie časového limitu (0 = bez limitu):
+Showing: All Games
+Zobrazujem: Všetky hry
+Showing: Apps
+Zobrazujem: Aplikácie
+Showing: Favorite Games
+Zobrazujem: Obľúbené hry
+Showing: Game History
+Zobrazujem: Históriu hry
+Showing: Internal Games
+Zobrazujem: Originálne hry
+Showing: Retroarch
+Zobrazujem: Retroarch
+Showing: USB Games Directory:
+Zobrazujem: Adresár hier USB:
+Slot
+Pozícia
+Space
+Medzera
+SpeedHack:
+SpeedHack:
+Spu Interpolation:
+Interpolácia zvuku:
+Starting EvolutionUI
+Spúšťam EvolutionUI
+Support via Discord:
+Podpora na Discorde:
+This is free software. It works AS IS and We take no responsibility for any issues or damage.
+Toto je bezplatný softvér. Funguje TAK, AKO JE, a NENESIEME žiadnu zodpovednosť za akékoľvek problémy alebo škody.
+to scan
+nájsť
+Total:
+Celkom:
+UI:
+Užívateľské rozhranie:
+Unknown Core (AutoDetect)
+Neznáme jadro (AutoDetect)
+Update RA Config:
+Aktualizovať konfiguráciu RA:
+Updating regional.db...
+Aktualizujem regional.db...
+USB Games
+USB Hry
+Use Controller
+Použite ovládač
+WARNING: NO COVER DB FOUND. PRESS ANY BUTTON.
+POZOR: NENAŠLA SA DATABÁZA OBALOV NA HRY. STLAČTE ĽUBOVOĽNÚ KLÁVESU.
+WARNING: NO GAMES FOUND. PRESS ANY BUTTON.
+POZOR: NEBOLA NÁJDENÁ ŽIADNA HRA. STLAČTE ĽUBOVOĽNÚ KLÁVESU.
+Widescreen:
+Širokouhlý obraz:
+Year:
+Rok:
