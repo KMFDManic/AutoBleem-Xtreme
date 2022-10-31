@@ -3,18 +3,16 @@ Combination of AutoBleem Xtreme+KMFDManic Xtreme Core+RetroArch Set-Up!
 
 To get up and running fast, you can follow the below Tutorial Video.  Or, you can:
 
-- Format a 32GB Flash Drive to Fat32, name it SONY, install AutoBleem Xtreme+Xtreme Injector!
+- Format a (recommended size) 32GB Flash Drive to Fat32, name it SONY, install AutoBleem Xtreme+Xtreme Injector!
 
 **Xtreme Injector Tutorial**
 https://www.youtube.com/watch?v=j3hM_vVlTyg
 
 Personal Thanks to Screemer, Axanar, Genderbent!
 
-![km](https://i.imgur.com/lGEOq0H.gif)
-
 **These Cores and Xtras are primarily meant for those who have Official Mini Classics.  Knock-Off ones will not at all work with these Releases!** 
 
-**Scroll to bottom to grab the FULL Release via KMFDManic-Xtreme-Cores.7z assets file!  Or, go to the Google Drive and/or hakchi.net link/s to grab the items you want!  And, of course, MD/SNES/NESC wise, Hakchi2 CE link will have them available, by simply opening Hakchi, Modules, KMFD Mod Hub!**
+**Scroll to bottom to grab the FULL Release via KMFDManic-Xtreme-PSC.7z assets file!  Or, go to the Google Drive to grab the items you want!**
 
 - **Suicide Prevention** [https://en.wikipedia.org/wiki/List_of_suicide_crisis_lines](https://en.wikipedia.org/wiki/List_of_suicide_crisis_lines)
 - **KMFD YouTube:)** [https://www.youtube.com/c/KMFDManic](https://www.youtube.com/c/KMFDManic)
